@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03_shadow(그림자)속성</title>
+  <style>
+    .shadow01{text-shadow: 1px 2px 3px #f00;}
+    .shadow02{box-shadow: 1px 2px 3px #f00;}
+
+    .btn01, .btn02{
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 3px #ccc;
+      text-align: center;
+      line-height: 60px;
+      font-size: 30px;
+      transition: 0.3s;
+    }
+    .btn01{border-radius: 0;}
+    .btn02:hover{
+      color: #00f;
+      box-shadow: 0 0 3px #333;
+    }
+
+    .border01{
+      border: 1px solid #ccc;
+      padding: 3px 3px 20px 3px;
+      box-shadow: 1px 1px 5px #ccc;
+    }
+    .border01:hover{
+      box-shadow: 1px 1px 5px #333;
+    }
+    .border02{
+      border: 10px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 5px #ccc;
+    }
+    .border02:hover{
+      border: 10px solid salmon;
+      box-shadow: 1px 1px 5px #333;
+    }
+  </style>
+</head>
+<body>
+  <h2>03_shadow(그림자)속성</h2>
+  <p>그림자 속성은 텍스트, 이미지, 블럭요소에 그림자 효과를 적용하고자 할 때 사용하는 속성.</p>
+  <p>작성법) text-shadow or box-shadow : x y offset 색상;</p>
+  
+  <p class="shadow01">텍스트에 그림자 효과 주기</p>
+  <p class="shadow02">블럭요소에 그림자 효과 주기</p>
+
+  <h3>마켓컬리의 상품 목록 좌, 우 버튼 서식 만들기</h3>
+  <span class="btn01">&#x3008;</span>
+  <span class="btn02">&#x3009;</span>
+  <br><br>
+
+  <img src="./images/10.jpg" alt="" class="border01">
+
+  <img src="./images/11.jpg" alt="" class="border02">
+
+</body>
+</html>

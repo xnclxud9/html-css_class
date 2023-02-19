@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01. transform, transition을 활용한 배너슬라이드</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    ol, ul, li{list-style: none;}
+    h2{
+      padding: 20px;
+      text-align: center;
+    }
+    .slide{
+      width: 1200px;
+      height: 470px;
+      margin: 0 auto;
+      text-align: center;
+      overflow: hidden;
+    }
+    .slide h2{
+      display: none;
+    }
+    .slide ul{
+      display: flex;
+      position: relative; /* 좌측으로 이동하기 위해 포지션을 선언함 */
+      transition: 0.5s;
+      transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+    label{
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background: #ccc;
+      border-radius: 50%;
+      transform: translateY(8px);
+      cursor: pointer;
+    }
+    input[type=radio]{display: none;}
+    
+    /* 라디오 버튼이 선택되면 해당 레이블 태그에 배경색 적용하기 */
+    #btn01:checked ~ label:first-of-type{background: #7954C9;}
+    #btn02:checked ~ label:nth-of-type(2){background: #7954C9;}
+    #btn03:checked ~ label:nth-of-type(3){background: #7954C9;}
+    #btn04:checked ~ label:last-of-type{background: #7954C9;}
+
+    /* 콘트롤 버튼을 클릭하면 해당 라디오버튼이 체크가 되는데 이때 라디오버튼에 따라 left값을 0, -1200, -2400, -3600값을 ul태그에 적용하여 좌측으로 움직이게 한다. */
+    #btn01:checked ~ ul{left: 0;}
+    #btn02:checked ~ ul{left: -1200px;}
+    #btn03:checked ~ ul{left: -2400px;}
+    #btn04:checked ~ ul{left: -3600px;}
+  </style>
+</head>
+<body>
+  <h2>01. transform, transition을 활용한 배너슬라이드</h2>
+
+  <article class="slide">
+    <h2>노랑풍선 배너 슬라이드</h2>
+    <input type="radio" id="btn01" name="a" checked>
+    <input type="radio" id="btn02" name="a">
+    <input type="radio" id="btn03" name="a">
+    <input type="radio" id="btn04" name="a">
+
+    <ul>
+      <li><a href="#" title="배너">
+        <img src="./images/banner1.jpg" alt="배너1"></a>
+      </li>
+      <li><a href="#" title="배너">
+        <img src="./images/banner2.jpg" alt="배너2"></a>
+      </li>
+      <li><a href="#" title="배너">
+        <img src="./images/banner3.jpg" alt="배너3"></a>
+      </li>
+      <li><a href="#" title="배너">
+        <img src="./images/banner4.jpg" alt="배너4"></a>
+      </li>
+    </ul>
+    <label for="btn01">&nbsp;</label>
+    <label for="btn02">&nbsp;</label>
+    <label for="btn03">&nbsp;</label>
+    <label for="btn04">&nbsp;</label>
+  </article>
+
+
+  <img src="./images/slide_banner.jpg" alt="슬라이드 디자인과 구조">
+</body>
+</html>

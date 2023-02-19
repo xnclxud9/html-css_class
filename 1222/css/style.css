@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/* 그리드 레이아웃 */
+.g_wrap{
+  width: 1440px;
+  display: grid;
+  grid-gap: 10px;
+  /* grid-template-columns: auto auto auto; */
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, 50px);
+  background: #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.g_wrap > .item{
+  background: #777;
+}
+
+/* 두번째 그리드 레이아웃 */
+.g_wrap2{
+  width: 1200px;
+  background: #9fe066;
+  padding: 10px;
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, 60px);
+}
+.g_wrap2 > .item{
+  background: #ccc;
+  font-size: 20px;
+  text-align: center;
+  line-height: 60px;
+}
+.g_wrap2 > .item:first-child{
+  grid-area: 1/1/2/3; /* 1행 1열 2행 3열*/
+}
+.g_wrap2 > .item:nth-child(5){
+  grid-area: 2/3/4/4;
+}
+
+/* 이미지 갤러리 */
+.g_wrap3{
+  width: 1175px;
+}
+.g_wrap3 .gallery{
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #000;
+  grid-template-columns: repeat(4, 281px);
+  grid-template-rows: repeat(4, 120px);
+}
+.gallery > .item{
+  width: 100%;
+  list-style: none;
+  overflow: hidden;
+}
+.gallery .item:first-child{grid-area: 1/1/3/3;}
+.gallery .item:nth-child(2){grid-area: 1/3/2/5;}
+.gallery .item:nth-child(4){grid-area: 2/4/5/5;}
+.gallery .item:nth-child(5){grid-area: 3/1/5/2;}
+.gallery .item:nth-child(6){grid-area: 3/2/5/4;}
+
+.gallery img{
+  width: 100%;
+  transition: 1s;
+}
+.gallery li:nth-child(5) img{width: 150%;}
+.gallery li:nth-child(2) img{transform: translate(0px, -200px);}
+.gallery img:hover{
+  transform: scale(1.1);
+}
+
+.gallery lI:nth-child(6){
+  background-image: url(../img/landscape-5561687_1920.jpg);
+  background-size: 100%;
+}
+
+/* 리본 디자인 서식 */
+.libon{
+  background: #05a5be;
+  width: 300px;
+  height: 34px;
+  text-align: center;
+  box-shadow: 0 0 3px #333;
+  padding-top: 4px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: rotate(45deg) translate(92px, 10px);
+}
+.libon > a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+  line-height: 28px;
+  text-shadow: 0 0 3px #333;
+  border-top: 1px dashed #82d9e7;
+  border-bottom: 1px dashed #82d9e7;
+}

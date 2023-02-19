@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>g_navigation(지마켓 pc화면 내비게이션)</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    h2, p{padding: 10px;}
+    ul, ol, li{list-style: none;}
+    a{
+      color: #333;
+      text-decoration: none;
+    }
+    header{
+      width: 1200px;
+      margin: 0 auto;
+      background: #ccc;
+      position: relative;
+    }
+    header > h1{
+      width: 200px;
+      height: 50px;
+    }
+    header > h1 > a{
+      background-image: url(./m_images/common.png);
+      display: block;
+      height: 50px;
+      text-indent: -9999px;
+    }
+    header > label[for=toggle]{
+      display: block;
+      width: 200px;
+      height: 50px;
+      background-image: url(./m_images/common.png);
+      background-position: 0 -240px;
+      text-indent: -9999px;
+    }
+    /* 카테고리 서식 */
+    .gnb > ul > li{
+      width: 200px;
+      background: #3B78CE;
+    }
+    .gnb > ul > li > a{  
+      height: 44px;
+      display: block;
+      background-image: url(./m_images/main.png);
+      text-indent: -9999px;
+    }
+    .gnb > ul > li:nth-child(2) > a{background-position: 0 -44px;}
+    .gnb > ul > li:nth-child(3) > a{background-position: 0 -88px;}
+    .gnb > ul > li:nth-child(4) > a{background-position: 0 -132x;}
+    .gnb > ul > li:nth-child(5) > a{background-position: 0 -176px;}
+    .gnb > ul > li:nth-child(6) > a{background-position: 0 -220px;}
+    .gnb > ul > li:nth-child(7) > a{background-position: 0 -263px;}
+    .gnb > ul > li:nth-child(8) > a{background-position: 0 -307x;}
+    .gnb > ul > li:last-child > a{background-position: 0 -351px;}
+
+    /* 마우스 오버시 배경색 변경하기 */
+    .gnb > ul > li:hover{background: #2a5694;}
+
+    /* 전체메뉴 서식 */
+    .total_mnu{
+      width: 100%;
+      height: 358px;
+      background: rgba(0,0,0,.8);
+      color: #fff;
+      position: absolute;
+      display: none;
+    }
+
+    /* 전체메뉴를 클릭하면 체크박스가 체크되는데, 체크박스의 하위요소들 중에서 .total_mnu의 display:block으로 설정하여 보이게 한다. */
+    #toggle:checked + header > .total_mnu{display: block;}
+    #toggle:checked + header > label{background-position: -210px -240px;}
+
+  </style>
+</head>
+<body>
+  <h2>지마켓 pc화면 내비게이션</h2>
+  <p>로고, 전체메뉴, 카테고리 메뉴를 배경이미지를 활용하여 background속성으로 삽입하고 마우스 오버시 배경색 변경하게 하기, 전체카테고리는 클릭시 전체 메뉴가 나오도록 하고 다시 클릭시 사라지도록 한다.</p>
+
+  <input type="checkbox" id="toggle">
+  <header>
+    <h1>
+      <a href="index.html" title="메인페이지로 바로가기">상단로고</a>
+    </h1>
+
+    <label for="toggle">전체메뉴</label>
+
+    <div class="total_mnu">
+      전체카테고리 메뉴가 들어가는 영역
+    </div>
+
+    <nav class="gnb">
+      <ul>
+        <li><a href="#" title="브랜드패션">브랜드패션</a></li>
+        <li><a href="#" title="패션의류">패션의류&middot;잡화&middot;뷰티</a></li>
+        <li><a href="#" title="유아동">유아동</a></li>
+        <li><a href="#" title="식품">식품&middot;생필품</a></li>
+        <li><a href="#" title="홈데코">홈데코&middot;문구&middot;취미</a></li>
+        <li><a href="#" title="컴퓨터">컴퓨터&middot;디지털&middot;가전</a></li>
+        <li><a href="#" title="스포츠">스포츠&middot;건강</a></li>
+        <li><a href="#" title="자동차">자동차&middot;공구</a></li>
+        <li><a href="#" title="여행">여행&middot;도서&middot;티켓&middot;e쿠폰</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+</html>

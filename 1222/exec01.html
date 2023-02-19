@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미에로화이바</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    body{background: #f36f21;}
+    .wrap{
+      width: 1200px;
+      margin: 0 auto;
+    }
+    h2{
+      color: #fff;
+      font-size: 28px;
+      line-height: 100px;
+    }
+    .gallery{
+      margin-bottom: 30px;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(3, 350px);
+      grid-template-rows: repeat(3, 246px);
+    }
+    .item{
+      width: 100%;
+      list-style: none;
+      overflow: hidden;
+      display: inline-block;
+      position: relative;
+    }
+    .item:nth-child(2){grid-area: 1/2/3/3;}
+    .item img{
+      width: 100%;
+    }
+    .txt{
+      width: 100%;
+      background: #000;
+      color: #fff;
+      line-height: 40px;
+      position: absolute;
+      bottom: -100px;
+      transition: 0.5s;
+      padding: 10px 20px;
+      box-sizing: border-box;
+    }
+    .item:hover .txt{bottom: 0;}
+    .txt > h4{
+      font-size: 21px;
+      color: #f36f21;
+    }
+    .btn{
+      border: 1px solid #fff;
+      color: #fff;
+      text-align: center;
+      width: 60px;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      font-size: 11px;
+      font-weight: bold;
+      line-height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <article class="wrap">
+    <h2>미에로화이바 Girl 스토리</h2>
+    <ul class="gallery">
+      <li class="item">
+        <a href="https://youtu.be/J43gcDsbIKo" title="TV광고">
+          <img src="./img/mcon5_1.jpg" alt="TV광고">
+          <div class="txt">
+            <h4>TV광고</h4>
+            <p>2022</p>
+            <span class="btn">영상보기</span>
+          </div>
+        </a>
+      </li>
+      <li class="item">
+        <a href="http://miero.co.kr/bbs/board.php?bo_table=gallery&wr_id=56" title="인쇄광고">
+          <img src="./img/mcon5_12.png" alt="인쇄광고">
+          <div class="txt">
+            <h4>인쇄광고</h4>
+            <p>2022</p>
+          </div>
+        </a>
+      </li>
+      <li class="item">
+        <a href="http://miero.co.kr/bbs/board.php?bo_table=gallery&wr_id=55" title="인쇄광고">
+          <img src="./img/mcon5_8.jpg" alt="인쇄광고">
+          <div class="txt">
+            <h4>인쇄광고</h4>
+            <p>2019</p>
+          </div>
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://youtu.be/Swj0E25YkqI" title="TV광고">
+          <img src="./img/mcon5_11.png" alt="TV광고">
+          <div class="txt">
+            <h4>TV광고</h4>
+            <p>2021</p>
+            <span class="btn">영상보기</span>
+          </div>
+        </a>
+      </li>
+      <li class="item">
+        <a href="http://miero.co.kr/bbs/board.php?bo_table=gallery&wr_id=54" title="인쇄광고">
+          <img src="./img/mcon5_13.png" alt="인쇄광고">
+          <div class="txt">
+            <h4>인쇄광고</h4>
+            <p>2018</p>
+          </div>
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://youtu.be/-kZC2F7gIao" title="TV광고">
+          <img src="./img/mcon5_9.jpg" alt="TV광고">
+          <div class="txt">
+            <h4>TV광고</h4>
+            <p>2020</p>
+            <span class="btn">영상보기</span>
+          </div>
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://youtu.be/59TqZlbo3MI" title="프로모션">
+          <img src="./img/mcon5_10.png" alt="프로모션">
+          <div class="txt">
+            <h4>프로모션</h4>
+            <p>2021</p>
+            <span class="btn">영상보기</span>
+          </div>
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://youtu.be/fRbO04ZoRfg" title="프로모션">
+          <img src="./img/mcon5_2.jpg" alt="프로모션">
+          <div class="txt">
+            <h4>프로모션</h4>
+            <p>2017</p>
+            <span class="btn">영상보기</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </article>
+</body>
+</html>

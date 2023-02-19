@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css선택자 - 동위(인접)선택자 p.351</title>
+  <style>
+    .first + li{background: #ff0;}
+    .first ~ li{color: #f00;font-weight: bold;}
+
+    .first ~ li:nth-child(4){color: blue;}
+    /* .first + li + li + li {color: blue;} */
+    /* .first ~ .four{color: blue;} */
+    /* .first ~ .three + li{color: blue;} */
+    
+
+  </style>
+</head>
+<body>
+  <h2>css선택자 - 동위(인접)선택자 p.351</h2>
+  <p>동위선택자란? 부모요소의 아래 자식요소들의 관계(동일한 관계)에서 기준을 정하고, 그 기준이 되는 요소의 바로 뒤나 뒤부터 나오는 요소들 모두 선택하고자 할 때 사용하는 선택자이다.</p>
+  <p>작성법) 선택자A + 선택자B : 선택자A 요소의 바로 뒤에 있는 B를 선택한다.</p>
+  <p>선택자A ~ 선택자B : 선택자A의 뒤에 있는 형제요소들 중에 B를 선택한다.</p>
+
+  <ul class="list01">
+    <li class="first">첫째입니다.</li>
+    <li>둘째입니다.</li>
+    <li class="three">셋째입니다.</li>
+    <li class="four">넷째입니다.</li>
+    <li>막내입니다.</li>
+  </ul>
+</body>
+</html>

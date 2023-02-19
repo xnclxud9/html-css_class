@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01그리드 레이아웃_grid</title>
+  <link href="./css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h2>01그리드 레이아웃_grid p.423</h2>
+  <p>그리드(grid)속성은 플렉스(flex)속성과는 다르게 두 방향(가로, 세로)으로 레이아웃을 만들기 위한 시스템이다.</p>
+  <h3>웹페이지 레이아웃 방법</h3>
+  <ul>
+    <li>table</li>
+    <li>float:left, right</li>
+    <li>display:inline;</li>
+    <li>display:inline-block;</li>
+    <li>display:block;</li>
+    <li>display:table;</li>
+    <li>display:flex(1차원, 가로축, 세로축)</li>
+    <li>display:grid(2차원, 가로/세로축)</li>
+    <li>다단 레이아웃</li>
+  </ul>
+
+  <h3>1. GRID Columns(열)</h3>
+  <img src="./img/column.png" alt="열">
+
+  <h3>2. GRID Row(행)</h3>
+  <img src="./img/row.png" alt="행">
+
+  <h3>3. GRID gap(여백)</h3>
+  <img src="./img/gap.png" alt="여백">
+
+  <h3>4. GRID Line(기준선)</h3>
+  <img src="./img/line.png" alt="기준선">
+
+  <h3>5. GRID Container(부모 속성)</h3>
+  <p>Grid Layout아웃에서 부모역할을 하기 위한 html태그요소이며 display:grid, display:inline-grid속성 값을 지정할 수 있다.</p>
+  <p>부모요소의 이름을 보통 'container', 자식요소의 이름을 'item'이라고 하며, 그리드는 column, row 아이템으로 구성된다.</p>
+
+  <h3>6. GRID 속성</h3>
+  <ul>
+    <li>display</li>
+    <li>grid-template-columns</li>
+    <li>grid-template-row</li>
+    <li>grid-template-area</li>
+    <li>grid-gap, grid-columns-gap, grid-row-gap</li>
+    <li>justify-items, align-items, place-items</li>
+    <li>justify-content, align-content, place-content</li>
+    <li>grid-auto-columns, grid-auto-rows</li>
+    <li>grid-auto-flow</li>
+    <li>grid</li>
+  </ul>
+
+    <p>css학습 참고 사이트 - https://www.w3schools.com/css/css_grid</p>
+
+    <h3>7. GRID item속성</h3>
+    <p>grid레이아웃에서 부모요소의 자식요소들을 아이템이라고 하며, 아이템들을 병합하고자 할 때, 열, 행 번호, 영역의 이름을 따로 지정하여 설정할 수 있다.</p>
+    <ul>
+      <li>grid-column : item의 열 시작위치 번호와 끝번호를 지정하여 병합하고자 할 때 사용. 예) 1/5</li>
+      <li>grid-row : item의 행 시작위치 번호와 끝번호를 지정하여 병합하고자 할 때 사용. 예) 1/4</li>
+      <li>grid-column, grid-row속성은 각각 grid-column-start, grid-column-end, grid-row-start, grid-row-end속성으로도 사용가능하다.</li>
+      <li>grid-column-start, grid-column-end</li>
+      <li>grid-row-start, grid-row-end</li>
+      <li>grid-column, grid-row</li>
+      <li>grid-area</li>
+      <li>justify-self, align-self, place-self</li>
+    </ul>
+
+    <h3>그리드 레이아웃 기본 개념 잡기</h3>
+    <section class="g_wrap">
+      <article class="item">item1</article>
+      <article class="item">item2</article>
+      <article class="item">item3</article>
+      <article class="item">item4</article>
+      <article class="item">item5</article>
+      <article class="item">item6</article>
+      <article class="item">item7</article>
+      <article class="item">item8</article>
+      <article class="item">item9</article>
+    </section>
+
+    <h3>그리드 레이아웃 자식요소 병합하기</h3>
+    <section class="g_wrap2">
+      <article class="item">item1</article>
+      <article class="item">item2</article>
+      <article class="item">item3</article>
+      <article class="item">item4</article>
+      <article class="item">item5</article>
+      <article class="item">item6</article>
+      <article class="item">item7</article>
+    </section>
+
+    <h3>실습예제 - 그리드 갤러리</h3>
+    <article class="g_wrap3">
+      <h3>이미지 갤러리</h3>
+      <ul class="gallery">
+        <li class="item"><img src="./img/cat-5628953_1920.jpg" alt="고양이"></li>
+        <li class="item"><img src="./img/house-5651866_1920.jpg" alt="집"></li>
+        <li class="item"><img src="./img/shoes-434918_1920.jpg" alt="신발"></li>
+        <li class="item"><img src="./img/pexels-photo-5076309.jpeg" alt="과일"></li>
+        <li class="item"><img src="./img/santorini-5655111_1920.jpg" alt="산토리니"></li>
+        <li class="item"></li>
+        <!-- <img src="./img/landscape-5561687_1920.jpg" alt="언덕"> -->
+      </ul>
+    </article>
+
+  <div class="libon">
+    <a href="#" title="">Fork me on Github</a>
+  </div>
+</body>
+</html>

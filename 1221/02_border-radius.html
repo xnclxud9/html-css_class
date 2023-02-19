@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_border-radius(모서리 둥글게)</title>
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      background: #f00;
+      margin-bottom: 10px;
+    }
+    #box01{border-radius: 10px;}
+    #box02{border-radius: 30px 60px;} /* 왼상, 오하 오상, 왼하 */
+    #box03{border-radius: 50%;} /* 정사각형을 정원으로 */
+    #box04{border-radius: 10px 40px 20px 3px;}
+    #box05{
+      background: #0f0;
+      animation-name: ani; /* 애니메이션 이름 */
+      animation-duration: 10s; /* 애니메이션 전체 시간*/
+      animation-iteration-count: infinite; /* 애니메이션 반복횟수 */
+    }
+    
+    /* 움직이게 하고 싶은 내용을 시간대별로 설정 */
+    @keyframes ani{
+      0%{border-radius: 10px;}
+      20%{border-radius: 60px 0 10px 20px;}
+      50%{border-radius: 50%;}
+      75%{border-radius: 100px 10px 30px 50px;}
+      100%{border-radius: 20px 1px 30px 100px;}
+    }
+
+  </style>
+</head>
+<body>
+  <h2>02_border-radius(모서리 둥글게)</h2>
+  <p>사용자가 선택한 요소에 모서리 부분을 둥글게 만드는 속성.</p>
+  <p>버튼이나, 박스의 모서리를 유연하게 처리하기 위해서 사용하며, 이미지도 적용이 가능하다.</p>
+
+  <p>작성법) border-radius:값px or 값%; or border-radius:0px 0px 0px 0px; 4군데 따로 설정가능</p>
+  <p>border-radius : 왼쪽상단 오른상단 오른하단 왼쪽하단</p>
+
+  <div id="box01"></div>
+  <div id="box02"></div>
+  <div id="box03"></div>
+  <div id="box04"></div>
+  <div id="box05"></div>
+
+  <img src="./images/10.jpg" alt="커피" id="coffee">
+
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스타벅스 모바일 웹</title>
+  <!-- 초기화 -->
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <!-- 공통서식 -->
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <!-- 메인서식 -->
+  <link rel="stylesheet" href="./css/main.css" type="text/css">
+</head>
+<body>
+  <input type="checkbox" id="toggle">
+  <!-- 헤더영역 -->
+  <header>
+    <h1>
+      <a href="index.html" title="메인페이지로 바로가기">
+      <img src="./images01/logo.png" alt="헤더로고"></a>
+    </h1>
+
+    <a href="login.html" title="로그인하기" class="login_btn">
+      <img src="./images01/user.svg" alt="로그인">
+    </a>
+    
+    <a href="location.html" title="지점찾기" class="loca_btn">
+      <img src="./images01/maps-and-flags.svg" alt="지점찾기">
+    </a>
+
+    <label for="toggle" class=total_btn>
+      <img src="./images01/menu.svg" alt="전체메뉴">
+    </label>
+
+    <!-- 내비게이션 -->
+    <nav class="gnb">
+      <label for="toggle" class="close_btn">
+        <img src="./images01/close.png" alt="닫기">
+      </label>
+      <ul>
+        <li>
+          <form name="search" method="post" action="keyword.php">
+            <input type="search" placeholder="검색어 입력">
+            <input type="button" value="search" class="search_bnt">
+          </form>
+        </li>
+        <li><a href="#" title="my starbucks">my starbucks<img src="./images01/arrow_down.png" alt="서브메뉴보기" class="sub_btn"></a></li>
+        <li><a href="#" title="coffee">coffee<img src="./images01/arrow_down.png" alt="서브메뉴보기" class="sub_btn"></a></li>
+        <li><a href="#" title="menu">menu<img src="./images01/arrow_down.png" alt="서브메뉴보기" class="sub_btn"></a></li>
+        <li><a href="#" title="store">store<img src="./images01/arrow_down.png" alt="서브메뉴보기" class="sub_btn"></a></li>
+        <li><a href="#" title="responsibility">responsibilyty<img src="./images01/arrow_down.png" alt="서브메뉴보기" class="sub_btn"></a></li>
+        <li><a href="#" title="my starbucks rewards">my starbucks rewards<img src="./images01/arrow_down.png" alt="서브메뉴보기" class="sub_btn"></a></li>
+        <li><a href="#" title="what's new">what's new<img src="./images01/arrow_down.png" alt="서브메뉴보기" class="sub_btn"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 메인영역 -->
+  <main>
+    <article class="decaf">
+      <h2>콜드 브루 커피</h2>
+      <img src="./images01/logo_decaf.png" alt=" 로고">
+      <p>디카페인 에스프레소 샷 추가 가능 (일부 음료 제외)</p>
+    </article>
+    <article class="menu">
+      <h2>메뉴목록</h2>
+      <ul>
+        <li>
+          <a href="#" title="나이트로 쇼콜라">
+            <img src="./images01/01.jpg" alt="나이트로 쇼콜라">
+            <span class="new">new</span>
+          </a>
+          <p>나이트로 쇼콜라</p> 
+        </li>
+        <li>
+          <a href="#" title="나이트로 쇼콜라 클라우드">
+            <img src="./images01/02.jpg" alt="나이트로 쇼콜라 클라우드">
+            <span class="new">new</span>
+          </a>
+          <p>나이트로 쇼콜라 클라우드</p>
+        </li>
+        <li>
+          <a href="#" title="콜드 폼 콜드 브루">
+            <img src="./images01/03.jpg" alt="콜드 폼 콜드 브루">
+            <span class="new">new</span>
+          </a>
+          <p>콜드 폼 콜드 브루</p>
+        </li>
+        <li>
+          <a href="#" title="나이트로 콜드 브루">
+            <img src="./images01/04.jpg" alt="나이트로 콜드 브루">
+          </a>
+          <p>나이트로 콜드 브루</p>
+        </li>
+        <li>
+          <a href="#" title="바닐라 크림 콜드 브루">
+            <img src="./images01/05.jpg" alt="바닐라 크림 콜드 브루">
+          </a>
+          <p>바닐라 크림 콜드 브루</p>
+        </li>
+        <li>
+          <a href="#" title="콜드 브루">
+            <img src="./images01/06.jpg" alt="콜드 브루">
+          </a>
+          <p>콜드 브루</p>
+        </li>
+        <li>
+          <a href="#" title="아이스 카페 아메리카노">
+            <img src="./images01/07.jpg" alt="아이스 카페 아메리카노">
+          </a>
+          <p>아이스 카페 아메리카노</p>
+        </li>
+        <li>
+          <a href="#" title="카페 아메리카노">
+            <img src="./images01/08.jpg" alt="카페 아메리카노">
+          </a>
+          <p>카페 아메리카노</p>
+        </li>
+        <li>
+          <a href="#" title="더블 바닐라 라떼">
+            <img src="./images01/09.jpg" alt="더블 바닐라 라떼">
+          </a>
+          <p>더블 바닐라 라떼</p>
+        </li>
+        <li>
+          <a href="#" title="아이스 더블 바닐라 라떼">
+            <img src="./images01/10.jpg" alt="아이스 더블 바닐라 라떼">
+          </a>
+          <p>아이스 더블 바닐라 라떼</p>
+        </li>
+        <li>
+          <a href="#" title="에스프레소 콘 파나">
+            <img src="./images01/11.jpg" alt="에스프레소 콘 파나">
+          </a>
+          <p>에스프레소 콘 파나</p>
+        </li>
+        <li>
+          <a href="#" title="에스프레소 마키아또">
+            <img src="./images01/12.jpg" alt="에스프레소 마키아또">
+          </a>
+          <p>에스프레소 마키아또</p>
+        </li>
+      </ul>
+    </article>
+  </main>
+
+  <!-- 푸터영역 -->
+  <footer>
+    <address>Copyright&copy;2022 starbucks allrights reserved.</address>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션 실습예제</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <style>
+    *{margin: 0;padding: 0;}
+    .box{
+      width: 400px;
+      height: 400px;
+      position: relative;
+    }
+    .icon_box{
+      display: flex;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      left: 110px;
+      top: 110px;
+      animation:ani1 30s linear infinite;
+    }
+    li{
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 50px;
+      text-align: center;
+      animation:ani2 30s linear infinite;
+    }
+    .fa-hippo{
+      background: #ffbb47;
+      line-height: 100px;
+      top: 150px;
+      left: -50px;
+    }
+    .fa-globe{
+      background: #7bdd65;
+      line-height: 100px;
+      top: -50px;
+      left: 150px;
+    }
+    .fa-house{
+      background: #657fdd;
+      line-height: 100px;
+      top: 150px;
+      left: 150px;
+    }
+    .fa-graduation-cap{
+      background: #dd8365;
+      line-height: 100px;
+      top: -50px;
+      left: -55px;
+    }
+    .circle{
+      width: 300px;
+      height: 300px;
+      border: 10px dashed #ccc;
+      border-radius: 50%;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      animation:ani2 30s linear infinite;
+    }
+    @keyframes ani1{
+      100%{transform: rotate(360deg);}
+    }
+    @keyframes ani2{
+      100%{transform: rotate(-360deg);}
+    }
+  </style>
+</head>
+<body>
+  <h2>인사철학</h2>
+
+  <div class="box">
+    <div class="circle">&nbsp;</div>
+    <ul class="icon_box">
+      <li class="fa-solid fa-hippo"></li>
+      <li class="fa-solid fa-globe"></li>
+      <li class="fa-solid fa-house"></li>
+      <li class="fa-solid fa-graduation-cap"></li>
+    </ul>
+  </div>
+</body>
+</html>
