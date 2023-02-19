@@ -1,0 +1,38 @@
+@charset "utf-8";
+  .login_form{
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+  }
+  .login_form legend{
+    display: block;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .login_form > p:first-of-type > label, .login_form > p:nth-of-type(2) > label{display: none;}
+  .login_form input{
+    width: 310px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  #id_txt, #pw_txt{
+    background: #eee;
+    text-indent: 10px;
+  }
+  .login_btn{
+    background: #e32929;
+    color: #fff;
+  }
+  input[type=checkbox]{
+    accent-color: #e32929;
+    margin: 0;
+    width: 10px;
+    margin-left: 120px;
+  }
+  .login_form > input:first-of-type{
+    background: rgb(23, 200, 61);
+    color: #fff;
+  }
+  .login_form > input:last-of-type{background: rgb(255, 234, 0);}

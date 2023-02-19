@@ -1,0 +1,283 @@
+@charset "utf-8";
+/* PC 서식 시작 */
+
+@media screen and (min-width: 1025px) {
+  
+  /* 헤더서식 */
+  header{
+    height: 170px;
+  }
+  .h_top{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative; /* 기준 ~ */
+  }
+  .h_top > h1{
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 200px;
+  }
+  .h_top > h1 img{width: 100%;}
+  .h_top > .lnb{
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
+  .lnb > ul{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .lnb > ul a{
+    font-size: 13px;
+    color: #fff;
+  }
+  .lnb > ul a:hover{text-decoration: underline;}
+
+  .h_bottom{
+    width: 100%;
+    height: 48px;
+    position: absolute;
+    bottom: 0;
+  }
+  .h_bottom .gnb{
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .h_bottom .gnb > ul{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .h_bottom > .gnb > ul > li{
+    position: relative;
+    line-height: 48px;
+    text-align: center;
+    padding: 0 40px;
+  }
+  .h_bottom > .gnb > ul > li > a{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+  }
+  .h_bottom > .gnb > ul > li > a:hover{text-decoration: underline;}
+  .h_bottom > .gnb > ul > li > a::after{
+    width: 1px;
+    height: 14px;
+    background: #fff;
+    content: "";
+    display: block;
+    position: relative;
+    top: -32px;
+    left: 82px;
+  }
+  .h_bottom .gnb > ul > li:nth-child(2) > a::after{left: 95px;}
+  .h_bottom .gnb > ul > li:nth-child(3) > a::after{left: 70px;}
+  .h_bottom .gnb > ul > li:nth-child(4) > a::after{left: 65px;}
+  .h_bottom .gnb > ul > li:nth-child(5) > a::after{left: 85px;}
+  .h_bottom .gnb > ul > li:nth-child(6) > a::after{left: 120px;}
+  .h_bottom .gnb > ul > li:last-child > a::after{display: none;}
+
+  /* 서브메뉴서식 */
+.sub{
+  display: none;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  background: rgba(255,255,255,.9);
+  padding: 15px 0;
+}
+.sub > li{line-height: 30px;}
+.sub > li > a{font-size: 13px;}
+.sub > li:hover a{color: #e32929;}
+.gnb > ul > li:first-child .sub{
+  padding-left: 300px;
+  left: -300px;
+}
+.gnb > ul > li:nth-child(6) .sub{
+  padding-right: 150px;
+  right: 0px;
+}
+.gnb:hover .sub{display: block;}
+
+
+  /* 메인서식 */
+  main .slide > h2{display: none;}
+  main .slide img{
+    width: 100%;
+    display: block;
+  }
+  section{padding: 50px 0;}
+
+  /* 무료체험 */
+  .free_ex{
+    height: 530px;
+  }
+  .free_ex article{
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .free_ex article > img{
+    float: left;
+    padding: 30px 0 0 120px;
+    width: 430px;
+  }
+  .free_ex_right{
+    text-align: center;
+    padding-top: 50px;
+    color: #fff;
+  }
+  .free_ex_right > h2{
+    font-size: 34px;
+    font-weight: 200;
+    padding-bottom: 16px;
+  }
+  .free_ex_right > h2 >img{
+    padding-bottom: 10px;
+    width: 60px;
+  }
+  .free_ex_right p{
+    font-size: 18px;
+    line-height: 30px;
+    padding: 50px 0 90px 0;
+  }
+  .button:hover{
+    color: #fff;
+    background: #333;
+  }
+
+  /* 쇼핑하기 */
+  .shop{
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .shop > h2{
+    text-align: center;
+    font-size: 34px;
+    font-weight: 200;
+    padding: 20px 0 40px 0;
+  }
+  .shop > h2 >img{
+    width: 40px;
+    padding-right: 10px;
+    transform: translateY(8px);
+  }
+  .p_center{
+    text-align: center;
+    margin-bottom: 130px;
+  }
+
+  /* 상품목록 */
+  .product{
+    display: flex;
+    justify-content: space-around;
+  }
+  .product > li{
+    width: 50%;
+    text-align: center;
+  }
+  .product > li img{
+    width: 300px;
+    float: left;
+    padding: 0 50px;
+  }
+  .info{
+    width: 200px;
+    float: right;
+    padding-top: 40px;
+    font-size: 18px
+  }
+  .info >h3{
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .info > p{line-height: 40px;}
+  .info > p:last-of-type{
+    padding-top: 20px;
+  }
+  .price{
+    padding-top: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #e32929;
+    display: inline-block;
+  }
+  /* 펫스토리 */
+  .story{
+    width: 100%;
+    height: 620px;
+    background: #f0f0f0;
+  }
+  .story > h2{display: none;}
+  .story > article{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  .story_left{
+    float: left;
+    text-align: center;
+    padding-left: 100px;
+  }
+  .story_left > h2{
+    font-size: 36px;
+    color: #333;
+    font-weight: 200;
+    padding: 120px 0 60px 0;
+  }
+  .story_left > h2 img{
+    width: 40px;
+  }
+  .story_left > p{
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 90px;
+  }
+  .s_img{
+    float: right;
+    width: 430px;
+    padding: 70px 120px 0 0;
+  }
+  /* 인스타그램 */
+  .instar{
+    padding: 50px 0;
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .instar > h2{
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    font-weight: 300;
+    padding: 120px 0 60px 0;
+    text-transform: uppercase;
+  }
+  .id_name{
+    display: block;
+    font-size: 16px;
+    padding: 10px 0;
+    text-transform: lowercase;
+  }
+  .instar > h2 img{
+    width: 40px;
+    transform: translateY(10px);
+  }
+  .gallery{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(3, 200px);
+  }
+  .gallery li{overflow: hidden;}
+  .gallery img{
+    width: 100%;
+    transition: 0.5s;
+  }
+  .gallery img:hover{
+    transform: scale(1.1);
+    filter: brightness(0.5);
+  }
+}

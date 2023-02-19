@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/* 체크박스, 전체메뉴, 장바구니 아이콘 숨기기 */
+#toggle, label[for=toggle], .cart_btn{display: none;}
+
+header{
+  background: #4b4b4b;
+  position: relative;
+  z-index: 100;
+}
+
+fieldset legend, fieldset span{display: none;}
+header fieldset{
+  position: absolute;
+  top: 60px;
+  right: -10px;
+}
+#search{
+  width: 230px;
+  height: 30px;
+  border-radius: 26px;
+  text-align: center;
+  border: none;
+  /* transition: 0.3s; */
+}
+/* #search:focus{width: 230px;} */
+label.fa-search{
+  font-size: 22px;
+  transform: translate(-36px, 4px);
+}
+
+/* 메인공통서식 */
+main > .slide > h2, .free_ex > h2{display: none;}
+.free_ex{background: #e32929;}
+
+/* 버튼 공통서식 */
+.button{
+  font-size: 16px;
+  background: #fff;
+  padding: 6px 30px;
+  border: 1px solid #ccc;
+  transition: 0.5s;
+}
+
+/* 푸터영역 */
+footer{
+  background: #464545;
+  height: 360px;
+}
+.f_top{
+  height: 60px;
+  background: #989898;
+}
+.f_nav{
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.f_lnb, footer dl{
+  display: flex;
+  justify-content: space-evenly;
+}
+.f_lnb li{margin: 0 15px;}
+.f_lnb li a{
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  line-height: 60px;
+}
+.f_nav dl{
+  width: 600px;
+  line-height: 60px;
+  font-size: 14px;
+  color: #fff;
+}
+.f_nav a{color: #fff;}
+.f_nav dl > dd > span{padding-left: 100px;}
+
+/* 푸터영역정보서식 */
+.f_info{
+  width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+  padding-top: 10px;
+}
+.f_info dt{display: none;}
+.f_info dd{
+  padding-bottom: 15px;
+  font-size: 18px;
+  color: #b4b4b4;
+  line-height: 46px;
+}
+.f_info dd > h3{
+  font-weight: 200;
+}
+.number{
+  font-size: 34px;
+  font-weight: 400;
+  color: #fff;
+}
+.sns a{
+  color: #fff;
+  padding: 0 10px;
+}
+.sns span{display: none;}
+.family_site select{
+  width: 250px;
+  padding: 10px;
+  border-radius: 8px;
+  color: #ccc;
+}
+address{
+  width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid #ccc;
+  color: #ccc;
+  padding: 30px 30px 0 30px;
+  box-sizing: border-box;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.a_info{width: 55%;}
+.a_pay{width: 35%;}
