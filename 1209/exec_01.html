@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습예제_보노보노처럼 살다니 다행이야</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    body{
+      font-family: "맑은 고딕",Arial, sans-serif;
+      font-size: 12px;
+      color: #333;
+      margin: 30px 10px;
+      width: 700px;
+      line-height: 21px;
+    }
+    img{
+      float: left;
+      padding: 0 30px 100px 0;
+    }
+    span[class*='icon']{
+      font-size: 10px;
+      padding: 0 1px;
+    }
+    .icon01{
+      background: #b1bee1;
+      color: #fff;
+      border: 1px solid #6279b9;
+    }
+    .icon02{
+      border: 1px solid #ccc;
+    }
+    h2{
+      color: #376bca;
+      margin: 5px 0;
+      font-size: 24px;
+    }
+    .color01{
+      color: #d53838;
+    }
+    a{
+      text-decoration: none;
+      font-size: 10px;
+      color: #333;
+      border: 1px solid #ccc;
+    }
+    a[href*='review']{
+      color: #6279b9;
+      padding: 0 2px;
+    }
+    select{
+      margin-left: 5px;
+      padding: 3px;
+      border: 1px solid #ccc;
+    }
+    hr{
+      width: 480px;
+      margin: 20px 0;
+      background: #ccc;
+      border: 1px solid #ccc;
+    }
+    .color02{
+      color: #d53838;
+      font-size: 21px;
+    }
+    .color03{
+      color: #3c5995;
+    }
+    .color04{
+      color: #376bca;
+      font-size: 16px;
+    }
+    a[href*='card']{
+      padding: 0 2px;
+    }
+    a[href*='store']{
+      display: inline-block;
+      width: 180px;
+      text-align: center;
+      margin-top: 15px;
+      color: #d53838;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <article>
+    <img src="./images/book.jpg" alt="보노보노책">
+    
+    <span class="icon01">오늘의 책</span>
+    <span class="icon02">이벤트</span>
+    <span class="icon02">무료배송</span>
+
+    <h2>보노보노처럼 살다니 다행이야(특별판)</h2>
+    <p>김신회 지음 &#x007C; 이가라시 미키오 그림 &#x007C; 놀 &#x007C; 2017년 04월 06일 출간</p>
+    <p><span class="color01">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span> 리뷰 82개
+      <a href="review.html" title="리뷰쓰기">리뷰쓰기</a>
+    </p>
+    <p>국내도서 주간베스트 <span class="color01">13</span>위 &#x007C; 
+      시/에세이 주간베스트 <span class="color01">4</span>위
+      <select>
+        <option value="">주요일간지 북섹션 추천도서</option>
+        <option value="">a</option>
+        <option value="">b</option>
+        <option value="">c</option>
+        <option value="">d</option>
+      </select>
+    </p>
+
+    <hr>
+
+    <p>정가 : 16,000원</p>
+    <p>판매가 : <span class="color02"><b>14,440</b>원</span> <span class="color03">[<strong>10</strong>&#x0025;&#x2193; <strong>1,600</strong>원 할인]</span></p>
+    <p>제휴할인가 : <span class="color04"><b>13,680</b>원</span> 교보-KB국민카드 5&#x0025; 청구할인(실적무관)
+      <a href="card.html" title="카드/포인트 안내">카드/포인트 안내</a>
+    </p>
+    <p>통합포인트 : <b>800</b>원 적립 <span class="color03">[<b>5</b>&#x0025; 적립]</span></p>
+    <p><a href="store.html" title="영업점 재고 위치">영업점 재고 &middot; 위치 &gt;</a></p>
+  </article>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08_css_selector(link)</title>
+  <style>
+    a{
+      background: #0ea50e;
+      color: #ffffff;
+      padding: 6px 20px;
+      text-decoration: none;
+    }
+    a:hover{
+      background: #ffffff;
+      color: #0ea50e;
+      border: 1px solid #0ea50e;
+    }
+    a:active{
+      background: #ffff00;
+    }
+  </style>
+</head>
+<body>
+  <h2>08_css_selector(link, 링크, 반응)</h2>
+  <p>링크선택자와 반응선택자는 웹페이지와 웹페이지를 연결하기 위한 a요소 또는 이미지에 사용하기 위한 선택자로써 사용자가 클릭을 하고자 할 때 변경되는 서식, 마우스 오버시 서식등 다양한 반응에 따른 동작을 만들고자 할 때 사용한다.</p>
+
+  <h3>1. 링크 선택자</h3>
+  <ul>
+    <li>:link - 하이퍼링크가 걸린 a태그요소에 서식을 적용</li>
+    <li>:visited - 하이퍼링크가 걸린 a태그를 선택한 적이 있는 경우 서식을 적용</li>
+  </ul>
+
+  <a href="#" title="네이버로 바로가기">네이버</a>
+
+  <h3>2. 반응 선택자</h3>
+  <ul>
+    <li>:hover - 마우스로 해당하는 요소에 올리면 서식이 적용</li>
+    <li>:active - 마우스로 해당하는 요소를 누르고 있을 때 서식이 적용</li>
+  </ul>
+</body>
+</html>

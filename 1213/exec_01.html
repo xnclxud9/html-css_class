@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구조선택자예제_표만들기</title>
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <style>
+    table{
+      margin: 10px;
+      width: 680px;
+      font-size: 11px;
+      line-height: 15px;
+      margin: 10px auto;
+    }
+    thead{
+      height: 30px;
+      background: #F49AC0;
+      border-top: 3px solid #EB70A7;
+      border-bottom: 1px solid #EB70A7;
+      color: #fff;
+      line-height: 25px;
+    }
+    tbody tr:nth-child(2n){
+      background: #fff3ef;
+    }
+    tbody td{
+      color: #909090;
+      text-align: center;
+      font-size: 12px;
+      padding: 5px 0;
+      border-bottom: 1px dashed #333;
+    }
+    tbody td:first-child{
+      width: 50px;
+    }
+    tbody td:nth-child(2){
+      text-align: left;
+      font-size: 13px;
+    }
+    tbody td:nth-child(3){
+      font-size: 13px;
+      color: #7d7d7d;
+      font-weight: bold;
+    }
+    a{
+      text-decoration: none;
+      color: #527692;
+    }
+    form{
+      text-align: center;
+    }
+    select{
+      width: 100px;
+    }
+    input[type=text]{
+      width: 100px;
+    }
+    input[type=submit]{
+      width: 40px;
+      background: #EB70A7;
+      border: 1px solid #972659;
+      color: #fff;
+    }
+    input[type=radio]{
+      accent-color: #787878;
+    }
+  </style>
+</head>
+<body>
+  <form name="게시판" method="post" action="#">
+  <table>
+    <thead>
+      <tr>
+        <th>NO.</th><th>SUBJECT</th><th>WRITER</th><th>DATE</th><th>HIT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>7</td><td><a href="#">[필독] 핑크 하우스 회원 혜택</a></td><td>관리자</td><td>05-29</td><td>3</td>
+      </tr>
+      <tr>
+        <td>6</td><td><a href="#">[안내] 생일 축하 쿠폰 및 적립금 안내</a></td><td>관리자</td><td>05-29</td><td>2</td>
+      </tr>
+      <tr>
+        <td>5</td><td><a href="#">[안내] 핑크 하우스 무료 배송 안내</a></td><td>관리자</td><td>05-29</td><td>1</td>
+      </tr>
+      <tr>
+        <td>4</td><td><a href="#">[필독] 배송사 및 처리 확인</a></td><td>관리자</td><td>05-29</td><td>1</td>
+      </tr>
+      <tr>
+        <td>3</td><td><a href="#">[필독] 카드 무이자 할부 행사 안내</a></td><td>관리자</td><td>05-29</td><td>1</td>
+      </tr>
+      <tr>
+        <td>2</td><td><a href="#">[안내] 핑크 하우스 오프라인 매장 안내</a></td><td>관리자</td><td>05-29</td><td>1</td>
+      </tr>
+      <tr>
+        <td>1</td><td><a href="#">[필독] 핑크 하우스 등급제 안내</a></td><td>관리자</td><td>05-29</td><td>2</td>
+      </tr>
+    </tbody>
+  </table>
+  
+    <select>
+      <option value="">제목</option>
+      <option value="">내용</option>
+      <option value="">글쓴이</option>
+    </select>
+    <input type="text">
+    <input type="submit" value="검색">
+    <input type="radio" checked name="a" id="r01"><label for="r01">and</label>
+    <input type="radio" name="a" id="r02"><label for="r02">or</label>
+  </form>
+</body>
+</html>

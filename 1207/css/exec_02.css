@@ -1,0 +1,83 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+div{
+  text-align: center;
+  font-family: "나눔바른고딕", arial,sans-serif;
+}
+h1 img{
+  width: 250px;
+  margin: 40px 0 20px 0;
+}
+.box01, .box02, .bt01{
+  width: 300px;
+  height: 40px;
+  margin: 5px 0;
+}
+.box01, .box02{
+  text-indent: 20px;
+  font-size: 12px;
+}
+.bt01{
+  margin: 20px 0;
+  border: 0;
+  background: #FFC72C;
+  color: #777;
+  font-size: 14px;
+  font-weight: bold;
+}
+li{display: inline-block;}
+.list01 a{
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+}
+.title{text-align: center;}
+.title::before{
+      content: "";
+      display: block;
+      height: 2px;
+      width: 300px;
+      position: relative;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+}
+.title span{
+      background: #ffffff;
+      padding: 0 20px;
+      position: relative;
+}
+h2{
+  color: #333;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 20px 0;
+}
+.list02 img{
+  width: 50px;
+  margin: 0 5px;
+}
+.bt02{
+  background: #777;
+  line-height: 40px;
+  margin: 10px 0;
+  padding: 12px 122px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+}
+p{
+  width: 300px;
+  display: inline-block;
+  text-align: left;
+  font-size: 11px;
+  margin: 20px 0;
+  line-height: 20px;
+}
+address{
+  margin-top: 30px;
+  text-align: center;
+  font-style: normal;
+  font-size: 10px;
+}

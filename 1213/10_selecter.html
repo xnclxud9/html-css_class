@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10_selecter(구조선택자) p.343</title>
+  <style>
+    .list01 li:first-child{color: #ff0000;}
+    .list01 li:last-child{color: #0000ff;}    
+    .list01 li:nth-child(2){color: #00ff00;}
+    .list01 li:nth-child(3){color: #ff9443;}
+    .list01 li:nth-child(2n){background: #ccc;}
+    .list01 li:nth-child(2n+1){background: #f4ff8e;}
+
+    article h4:first-of-type{color: #ff0000;}
+    article h4:last-of-type{color: #0000ff;}
+    article p:first-of-type{background: #ccc;}
+    article p:last-of-type{background: #ffff00;}
+  </style>
+</head>
+<body>
+  <h2>10_selecter(구조선택자) p.343</h2>
+  <p>구조선택자는 css3에서부터 지원되는 선택자로써 일반적으로 자손 선택자와 병행해서 많이 사용하는 선택자이다.</p>
+  <ul>
+    <li>1. 일반구조선택자 : 부모태그요소 아래 자식요소들이 같은 태그일 경우 사용한다.</li>
+    <li>2. 형태구조선택자 : 부모태그요소 아래 자식요소들이 각각 다른 태그일 경우 사용한다.</li>
+  </ul>
+
+  <h3>1. 일반구조선택자</h3>
+  <ul class="list01">
+    <li>첫째입니다. :first-child</li>
+    <li>둘째입니다. :nth-child(n)</li>
+    <li>셋째입니다. :nth-child(n)</li>
+    <li>넷째입니다. :last-child</li>
+  </ul>
+
+  <h3>2. 형태구조선택자</h3>
+  <article>
+    <h4>제목태그</h4>
+    <p>문단태그</p>
+    <h4>제목태그</h4>
+    <p>문단태그</p>
+  </article>
+</body>
+</html>

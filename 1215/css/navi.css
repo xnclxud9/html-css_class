@@ -1,0 +1,124 @@
+@charset "utf-8";
+h2, h3, p{padding: 10px;}
+/* 1. 세로방향 내비게이션 */
+a{
+  color: #333;
+  text-decoration: none;
+}
+.gnb{
+  width: 200px;
+  background: #ccc;
+}
+.gnb ul li{text-indent: 10px;} /* 패딩, 마진 X 들여쓰기 */
+.gnb ul li a{
+  display: block;
+  line-height: 40px;
+  transition: 0.3s; /* 변화 속도 */
+}
+.gnb ul li a:hover{
+  background: #333;
+  color: #fff;
+}
+
+/* 2. 가로방향 내비게이션 */
+.gnb2{
+  width: 1000px;
+  margin: 0 auto;
+  height: 40px;
+  background: #0d4633;
+}
+.gnb2 ul li{
+  float: left;
+  text-align: center;
+}
+.gnb2 ul li a{
+  display: block; /* 마우스 클릭하는 영역을 넓혀주기 위해*/
+  line-height: 40px; /* 메뉴 40높이에서 글자가 중앙정렬되게 하기 위해*/
+  color: #fff;
+  padding: 0 40px;
+}
+.gnb2 ul li a:hover{
+  color: #f26b24;
+  text-decoration: underline;
+}
+
+/* 3. 2단 내비게이션 */
+/* main menu */
+.navi_wrap{
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background: hsla(159, 68%, 24%, 0.636);
+  overflow: hidden; /* 해당 영역을 벗어난 콘텐츠 숨긴다 */
+  transition: 0.5s;
+}
+.navi_wrap:hover{
+  height: 320px;
+}
+.gnb3{
+  width: 100%;
+  background: #0d4633;
+}
+.gnb3 > ul{
+  width: 1000px;
+  height: 40px;
+  margin: 0 auto;
+}
+.gnb3 > ul > li{ 
+  position: relative; /* 기준설정 */
+  float: left;
+}
+.gnb3 > ul > li > a{
+  display: block;
+  line-height: 40px;
+  color: #fff;
+  padding: 0 40px;
+  text-align: center;
+}
+.gnb3 > ul > li > a:hover{
+  color: #f26b24;
+  text-decoration: underline;
+}
+
+/* submenu */
+.sub{
+  width: 100%;
+  position: absolute;
+}
+.sub li{text-indent: 40px;}
+.sub li a{
+  line-height: 30px;
+  font-size: 14px;
+  display: block;
+}
+
+/* footermenu */
+footer{
+  height: 300px;
+  background: #555;
+  padding: 15px 0;
+}
+.f_inner{
+  width: 100%;
+}
+.f_inner .f_lnb{
+  width: 1000px;
+  margin: 0 auto;
+}
+.f_lnb ul li{
+  float: left;
+  height: 40px;
+}
+.f_lnb ul li::after{
+  content: '·';
+  color: #fff;
+  padding: 0 10px;
+}
+.f_lnb ul li:last-child::after{
+  display: none;
+}
+.f_lnb ul li a{
+  color: #fff;
+  font-size: 14px;
+  line-height: 40px;
+}

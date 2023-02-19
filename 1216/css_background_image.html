@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css_background_image p.295</title>
+  <style>
+    div{
+      width: 100%;
+      height: 300px;
+      border: 3px solid #000;
+      background-image: url(./img/back.jpg);
+    }
+    .box02{
+      /* background-repeat: no-repeat; */
+      background-repeat: repeat-y;
+    }
+    .box03{
+      background-repeat: no-repeat;
+      background-size: 150px;
+    }
+    .box04{background-origin: border-box; /* 배경이미지와 테두리가 겹침 */}
+    .box05{
+      background-image: url(./img/mob_fav_prod_bg_new.jpg);
+      background-attachment: fixed; /* 배경고정하기 */
+      background-size: 100%;
+    }
+    .box06{
+      background-repeat: no-repeat;
+      background-position: 100px 200px;
+    }
+    .box07{
+      background:url('./img/auction.gif') left no-repeat, url('./img/daum.png') right no-repeat;
+    }
+    h1{
+      width: 445px;
+      height: 110px;
+      border: 3px solid #000;
+      background-image: url(./img/sp_main_947f65.png);
+      background-position: 0px -312px;
+    }
+    h1 a{
+      display: block;
+      height: 110px;
+      /* color: rgba(255, 255, 255, .0); */
+      text-indent: -9999px;
+    }
+    .dark_btn{
+      position: fixed;
+      right: 10px;
+      bottom: 10px;
+      width: 270px;
+      height: 100px;
+      background-image: url(./img/sp_main_947f65.png);
+      background-position:  -541px -224px;
+      height: 100px;
+      text-indent: -9999px;
+    }
+    .dark_btn:hover{background-position:  -541px -114px;}
+
+    /* 다크모드 버튼 클릭시 체크박스가 체크되면서 바로뒤 wrap의 배경색, 글자색 변경한다. */
+    #dark_btn:checked + .wrap{
+      height: 100%;
+      background-image: none;
+      color: #fff;
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="dark_btn">
+
+  <div class="wrap">
+    <h2>css_background_image p.295</h2>
+    
+    <h3>1. 배경이미지 삽입</h3>
+    <div class="box01"></div>
+
+    <h3>2. 배경이미지 반복설정</h3>
+    <div class="box02"></div>
+
+    <h3>3. 배경이미지 크기설정</h3>
+    <div class="box03"></div>
+
+    <h3>4. 배경이미지 기준위치 지정</h3>
+    <div class="box04"></div>
+
+    <h3>5. 배경이미지 고정하기</h3>
+    <div class="box05"></div>
+
+    <h3>6. 배경이미지 위치지정하기</h3>
+    <div class="box06"></div>
+
+    <h3>7. 멀티배경이미지 삽입</h3>
+    <div class="box07"></div>
+
+    <h1>
+      <a href="index.html" title="메인페이지로 바로가기">상단로고</a>
+    </h1>
+  </div>
+
+    <label class="dark_btn" for="dark_btn">다크모드</label>
+  
+</body>
+</html>

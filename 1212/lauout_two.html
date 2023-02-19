@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout_two(2단)</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    header, main, footer{
+      width: 1440px;
+      margin: 0 auto;
+    }
+    header{
+      height: 150px;
+      background: rgb(180, 180, 180);
+    }
+    main{
+      /* height: 600px; */
+      background: rgb(100, 100, 100);
+      margin-top: 50px;
+    }
+    main::after{/* 메인영역의 아래쪽에 공간을 만들어서 여백을 삽입한다. */
+      content: "";
+      clear: both;
+      display: block;
+      margin-bottom: 50px;
+    }
+    aside{
+      width: 470px;
+      height: 500px;
+      background: #ccc;
+      float: left;
+      margin-right: 15px;
+    }
+    section{
+      width: 470px;
+      height: 550px;
+      background: #919191;
+      float: left;
+    }
+    article{
+      width: 470px;
+      height: 550px;
+      float: right;
+      background: rgb(83, 83, 83);
+    }
+    footer{
+      clear: both;
+      height: 308px;
+      background: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    header : 웹페이지의 상단영역으로써 상단로고(h1), 검색폼(search), 내비게이션(nav), 등이 들어가는 영역이다.
+  </header>
+
+  <main>
+    <aside>1단</aside>
+    <section>2단</section>
+    <article>3단</article>
+  </main>
+
+  <footer>
+    footer : 웹페이지의 하단영역으로써 하단로고, 회사소개, 이용약관, 회사명, 주소, 연락처, 카피라이트 내용이 들어가는 영역이다.
+  </footer>
+</body>
+</html>

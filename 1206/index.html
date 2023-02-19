@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 웹/앱 인트로 화면</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        header{
+            height: 170px;
+            background-image: url(./header_bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        h1{
+            text-align: center;
+        }
+        h1 img{
+            width: 160px;
+            padding-top: 30px;
+        }
+        footer{
+            height: 60px;
+            background: #4C5A72;
+            color: #fff;
+            text-align: center;
+            line-height: 60px;
+        }
+        form{
+            text-align: center;
+            padding: 60px 0;
+        }
+        .input_txt01{
+            width: 320px;
+            height: 50px;
+            background: #F4F5F7;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+        }
+        .btn01{
+            width: 320px;
+            height: 50px;
+            background: #4b9af4;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+        }
+        .link_txt01{
+            color: #2D9CDB;
+            font-weight: bold;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단헤더영역 시작 -->
+    <header>
+        <h1>
+            <a href="index.html" title="처음으로 바로가기">
+                <img src="./main_logo.png" alt="상단로고">
+            </a>
+        </h1>
+    </header>
+
+    <!-- 메인영역 시작 -->
+    <main>
+        <form main="login" method="post" action="server.php">
+            <p><input type="email" placeholder="이메일 주소를 입력" class="input_txt01"></p>
+            <p><input type="password" placeholder="패스워드 입력" class="input_txt01"></p>
+            <p><input type="submit" value="SIGN IN" class="btn01"></p>
+            <p><a href="sub.html" title="패스워드 찾기" class="link_txt01">Forget Password</a></p>
+        </form>
+    </main>
+    
+    <!-- 푸터영역 시작 -->
+    <footer>
+        Don't have an account? <a href="join.html" title="회원가입" class="link_txt01">Creat one now.</a>
+    </footer>
+</body>
+</html>

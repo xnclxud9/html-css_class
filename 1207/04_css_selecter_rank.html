@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04_css_selector_rank(우선순위)</title>
+  <style>
+    span{color: #ff0000;}
+    #txt01{color: #0000ff;}
+    .txt02{color: #00ff00 !important;}
+    
+    /* 콘트롤 버튼 서식 */
+    .ctrl_bnt{
+      padding: 0;
+    }
+    .ctrl_bnt > li{
+      width: 15px;height: 15px;
+      background: #cccccc;
+      list-style: none;
+      display: inline-block;
+      border-radius: 50%;
+    }
+    .act{
+      background: orange !important;
+    }
+  </style>
+</head>
+<body>
+  <h2>04_css_selector_rank(우선순위) p.186</h2>
+  <p>css는 서식을 적용할 때 첫줄부터 적용하고 아랫줄에 있는 서식을 순차적으로 내려가면서 적용한다. 이것을 cascading(연속화, 폭포)이라고 하며, 만약 부모태그에 서식이 적용되어 있다면 부모의 서식을 기준으로 상속받아 아래 요소가 서식이 적용되는데, 이런우선순위 규칙을 스타일 오버로딩(style overloading)이라고 한다.</p>
+
+  <p>!important > 인라인서식 > #id > .class > tag > 외부서식 순으로 우선순위가 적용된다.</p>
+
+  <span id="txt01" class="txt02">글자서식 변경하기</span>
+
+  <h3>UI디자인 구성요소 - 콘트롤 버튼 구현하기</h3>
+  <p>콘트롤 버튼 - 현재위치, 버튼, 클릭하면 해당 슬라이드 이미지가 나옴. 이미지 개수</p>
+  <p>목록태그로 작성하고 css로 서식을 꾸민다.</p>
+
+  <ul class="ctrl_bnt">
+    <li class="act">&nbsp;</li>
+    <li>&nbsp;</li>
+    <li>&nbsp;</li>
+    <li>&nbsp;</li>
+  </ul>
+</body>
+</html>

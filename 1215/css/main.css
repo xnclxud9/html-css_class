@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+#toggle{display: none;}
+
+header{
+  position: relative; /* 부모기준 */
+  height: 70px;
+  background: #333;
+}
+header h1{text-align: center;}
+header h1 img{
+  height: 60px;
+  padding-top: 5px;
+}
+.total_btn, .cart_btn{
+  position: absolute;
+  top: 10px;
+}
+.total_btn{left: 10px;}
+.cart_btn{right: 10px;}
+
+main{height: 55vh;}
+@media screen and (max-width: 320px) {
+  .s_bg, .s_txt{max-width: 100%;}
+}
+@media screen and (min-width: 321px) and (max-width: 430px) {
+  .s_bg, .s_txt{max-width: 430px;}
+  main{height: 73.9vh;}
+}
+/* vh단위 : vertical height의 약자로써 디스플레이 화면의 높이를 기준으로 비율로 크기를 설정하고자 할 때 사용한다. */
+
+.slide .s_bg{position: absolute;}
+.slide .s_txt{position: absolute;}
+
+footer{
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+footer address{
+  line-height: 40px;
+  font-style: normal;
+  font-size: 12px;
+}

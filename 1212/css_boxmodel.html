@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css_boxmodel(박스모델) p238</title>
+  <style>
+    .p01{
+      width: 800px;
+      height: 50px;
+      background: #ffff00;
+      display: inline-block;
+    }
+    span{
+      background: #00ff00;
+      display: block;
+      width: 600px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+    div{
+      width: 150px;
+      height: 150px;
+      background: #ffff00;
+    }
+    .box02{
+      padding: 5px;
+      border: 3px solid #ff0000;
+    }
+    .box03{
+      padding: 3px 6px;
+      border-left: 2px solid #00f;
+      border-bottom: 5px solid #f00;
+      margin-left: 20px;
+      margin-top: 30px;
+    }
+    .box04{
+      box-sizing: border-box; /* 박스크기에 테두리값, 패딩값을 포함하여 계산함 css3추가된 속성 */
+      padding: 5px;
+      border: 3px solid #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <h2>css_boxmodel(박스모델) p238</h2>
+  <h3>1. display(가시)속성</h3>
+  <p>html태그는 저마다 보이지 않는 특성을 가지고 있는데 이것을 display속성이라고 한다.</p>
+  <p>display속성 - block, inline, inline-block, table, cell, none....... 등이 있다.</p>
+
+  <h4>1. 블럭방식의 요소</h4>
+  <p class="p01">p요소인 나는 블럭요소입니다. 왼쪽에서 오른쪽까지 영역을 무조건 차지하지요. 블럭요소는 줄바꿈을 하지 않아도 자동으로 변경됩니다.</p>
+  <p class="p01">또한 가로크기, 세로크기값을 설정하여 크기를 지정할 수 있습니다. 블럭방식의 요소에는 p, h1~h6, div, header, nav, main, section, article, aside, footer, dl, dt, dd, ul, li, ol, form, fieldset, hr, table 등이 있습니다.</p>
+
+  <h4>2. 인라인 요소</h4>
+  <span>spna태그인 나는 인라인 요소입니다. 글자가 있는 곳까지만 영역을 차지하지요.</span>
+  <span>블럭요소와는 다르게 자동으로 줄이 변경되지 않고 br요소를 사용하여 줄바꿈을 합니다.</span>
+  <span>인라인요소는 크기값을 가질 수 없습니다. 대신 display속성을 block또는 inline-block으로 변경하면 가능합니다.</span>
+  <span>대표적인 태그로는 img, b, strong, sup, sub, br, input, label, button, textarea........등이 있습니다.</span>
+
+  <h3>2. 박스모델 개념 p.248</h3>
+  <p>box model이란? 블럭요소와 인라인요소가 가질 수 있는 크기와 마진, 패딩, 테두리값을 사용하여 배치하는 개념을 말한다.</p>
+  <p>박스계산공식<br>
+    전체 가로크기 = 가로크기 + 패딩값 + 테두리값 + 마진값<br>
+    전체 세로크기 = 세로크기 + 패딩값 + 테두리값 + 마진값
+  </p>
+  <p>패딩값은 padding:10px, padding:10px 5px, padding:상단 오른 아래 왼쪽방향으로 설정</p>
+  <p>마진값은 패딩값과 같이 설정이 가능</p>
+  
+  <div class="box01">150*150</div><br>
+  <div class="box02">150*150, padding:5px, border:3px solid #ff0000;</div><br>
+  <div class="box03">150*150, padding:3px 6px;
+    border-left:2px solid #f00;
+    border-bottom:5px solid #f00;
+    margin-left:20px;
+    margin-top:30px;
+  </div><br>
+  <div class="box04">150*150</div>
+</body>
+</html>

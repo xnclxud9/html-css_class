@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* 공통서식 */
+*{margin: 0;padding: 0;}
+body{line-height: 24px;}
+h2, h3, p{
+  padding: 15px;
+  font-weight: bold;
+}
+.box{
+  width: 800px;
+  border: 2px solid #000;
+  padding: 10px;
+  background: #ccc;
+}
+.box li{
+  border: 1px solid #f00;
+  background: #ff0;
+  width: 180px;
+  height: 100px;
+  list-style: none;
+}
+
+/* 1. display:inline 방식
+  - 장점 : 가로방향배치
+  - 단점 : 블럭요소가 아니므로 크기값이 사라진다.
+  (패딩값으로 크기 지정 가능)
+*/
+.list01 li{
+  display: inline;
+  padding: 39px 54px;
+  margin: 10px 6px;
+  line-height: 102px;
+}
+
+/* 2. display:inline-block 방식
+  - 장점 : 가로방향배치, 크기값 유지
+  - 단점 : 인라인 성격도 가지기 때문에 약간의 틈이 생긴다.
+*/
+
+.list02{text-align: center;}
+.list02 li{
+  display: inline-block;
+  margin-right: 12px;
+  text-align: left;
+}
+.list02 li:last-child{margin: 0;}
+
+/* 3. float:left 방식
+  - 장점 : 여백을 주지 않고 옆으로 딱 달라붙게 가로방향배치
+  - 단점 : 부모가 자손의 영역을 인식하지 못함, 아래 다른 요소가 현재 영역을 침범함
+
+  해결방법 1 : float 속성을 적용한 요소의 다음 요소에 clear속성 적용 (다음 요소가 제자리를 찾아감)
+
+  해결방법 2 : ul::after[clear: both;content: "";display: block;} 속성으로 부모높이 해결
+*/
+.list03::after{ /* 빈영역을 만들어서 부모의 높이 복구 */
+  clear: both;
+  content: "";
+  display: block;
+}
+.list03 li{
+  float: left;
+  margin-left: 18px;
+}
+.list03 li:first-child{margin-left: 10px;}
+h3{clear: left;}
+
+/* 4. display:flex 방식 - 부모요소에 적용해야 자식요소가 가로배치가 된다.
+  - 장점 : 완벽한 수평정렬, 여백이 있어서 레이아웃이 깨지지 않음, 부모높이가 살아있음
+  - 단점 : MS사의 웹브라우저 IE10 이하에서는 인식이 안됨
+  flex 참고 사이트
+  - https://studiomeal.com/archives/197
+*/
+.list04{
+  display: flex;
+  /* justify-content: center; 자식 요소 가운데 배치 */
+  justify-content: space-around; /* 자식 요소 일정한 간격으로 배치 */
+}

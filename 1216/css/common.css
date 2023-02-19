@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* 공통서식 */
+
+/* 기본서식 -
+글자모양, 크기, 색상, 링크서식, 줄간격
+*/
+body{
+  font-family: "맑은 고딕", arial, sans-serif;
+  font-size: 12px;
+  color: #333;
+}
+a{
+  color: #333;
+  text-decoration: none;
+}
+#toggle{display: none;}
+
+/* 헤더서식 */
+header{
+  background: #f6f5ef;
+  border-bottom: 1px solid #e5e5e5;
+  height: 70px;
+  position: relative;
+}
+header h1{width: 54px;}
+h1 img{
+  width: 100%;
+  padding: 8px 0 0 15px;
+}
+
+/* 버튼서식 */
+.login_btn, .loca_btn, .total_btn{
+  position: absolute;
+}
+.login_btn img{width: 32px;}
+.loca_btn img{width: 28px;}
+.total_btn img{width: 42px;}
+.total_btn{
+  right: 15px;
+  top: 19px;
+  cursor: pointer;
+}
+.loca_btn{
+  right: 82px;
+  top: 16px;
+}
+.login_btn{
+  right: 132px;
+  top: 16px;
+}
+
+/* 내비게이션서식 */
+.gnb{
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  transition: 0.5s;
+  z-index: 999;
+}
+/* 사용자가 토글버튼을 클릭시 체크박스가 체크되면서 그아래 .gnb의 위치를 left:0으로 설정하여 나오게 한다. */
+#toggle:checked + header > .gnb{ /* 관계 표시 + : 형제, > : 자손 */
+  left: 0;
+}
+.close_btn{
+  position: absolute;
+  top: 20px;
+  left: 20%;
+  cursor: pointer;
+}
+.close_btn img{
+  width: 40px;
+  transition: 0.8s;
+}
+.close_btn:hover img{transform: rotate(180deg);}
+.gnb li{
+  height: 50px;
+  padding: 0 15px;
+  border-bottom: 1px solid #222222;
+}
+.gnb a{
+  display: block;
+  color: #fff;
+  font-size: 1rem; /* 1rem - 16px */
+  text-transform: uppercase;
+  line-height: 50px;
+}
+.gnb a:hover{text-decoration: underline;}
+.sub_btn{
+  float: right;
+  width: 30px;
+  position: relative;
+  top: 10px;
+}
+.gnb li:first-child, .gnb li:nth-child(2){background: #2e2724;}
+.gnb li:nth-child(2) a{text-transform: capitalize;}
+.gnb ul{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background: #000;
+}
+.gnb li:first-child{
+  text-align: center;
+  height: 80px;
+}
+.gnb input{
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 3px;
+  border: none;
+  position: relative;
+  top: 25px;
+}
+.search_bnt{
+  background: #636363;
+  color: #fff;
+  text-transform: capitalize;
+  cursor: pointer;;
+}
+
+/* 푸터서식 */
+footer{background: #333;}
+footer address{
+  text-align: center;
+  font-style: normal;
+  line-height: 50px;
+  color: #fff;
+  font-size: 12px;
+}

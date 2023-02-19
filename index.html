@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기초부터 확실하게! HTML, CSS</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    body{
+      font-family: "맑은 고딕", arial, sans-serif;
+      font-size: 12px;
+      color: #333;
+    }
+    h1, h2{text-align: center; }
+    h1 img{width: 300px;}
+    h2{line-height: 40px;}
+
+    /* 테두리 선 */
+    .border01{
+      border-top: 3px solid #f1672b;
+      border-bottom: 3px solid #f1672b;
+      margin-bottom: 50px;
+    }
+    .border02{
+      border-top: 3px solid #1694d2;
+      border-bottom: 3px solid #1694d2;
+    }
+
+    /* 제목 배경 */
+    .bgcolor01{background: #f37745;}
+    .bgcolor02{background: #31aedf;}
+    dl{text-indent: 20px;}
+    dt{
+      font-size: 14px;
+      color: #fff;
+      padding: 12px 0;
+      font-weight: bold;
+      border-bottom: 1px solid #fff;
+    }
+    dd{
+      border-bottom: 1px solid #ccc;
+      text-indent: 30px;}
+    dd a{
+      display: block;
+      font-size: 12px;
+      line-height: 40px;
+      color: #333;
+      text-decoration: none;
+    }
+    .border01 dd a:hover{
+      background: #ffd8b5;
+    }
+    .border02 dd a:hover{
+      background: #aae1f9;
+    }
+
+    /* aside 서식 */
+    aside{
+      position: fixed;
+      right: 50px;
+      bottom: 50px;
+    }
+    aside a{
+      display: block;
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 15px 10px;
+      background: #fff;
+      border-radius: 50%;
+      position: relative;
+      border: 1px solid #ccc;
+    }
+    aside a:hover{
+      background: #000;
+      color: #fff;
+      border: 1px solid #000;
+    }
+
+    /* 푸터 서식 */
+    footer{
+      background: #4b4b4b;
+      color: #fff;
+      text-align: center;
+      line-height: 50px;
+    }
+    footer address{font-style: normal;}
+  </style>
+</head>
+<body>
+  <header>
+  <h1><a href="index.html" title="처음으로 바로가기">
+    <img src="./img/html.png" alt="html5로고"></a></h1>
+  </header>
+  <main>
+  <h2>기초부터 확실하게! 페이지 내용전달을 위한 HTML5</h2>
+    <section class="border01">
+    <dl>
+      <dt class="bgcolor01">1일차 - html5와 기본 문법, 시멘틱구조 태그</dt>
+      <dd><a href="./1129/html5.html" title="html5기본태그">html5 기본 문법</a></dd>
+      <dd><a href="./1129/semantic.html" title="시멘틱구조 태그">시멘틱구조 태그</a></dd>
+    </dl>
+
+    <dl>
+      <dt class="bgcolor01">2일차 - 제목, 문단, 인용문, 프리, 글자관련, 목록</dt>
+      <dd><a href="./1130/01_heading.html" title="제목태그">제목태그</a></dd>
+      <dd><a href="./1130/02_paragraph.html" title="문단태그">문단태그</a></dd>
+      <dd><a href="./1130/03_blockquote.html" title="인용문태그">인용문태그</a></dd>
+      <dd><a href="./1130/04_pre.html" title="프리태그">프리태그</a></dd>
+      <dd><a href="./1130/05_txt.html" title="글자태그">글자관련태그</a></dd>
+      <dd><a href="./1130/06_list.html" title="목록태그">목록태그</a></dd>
+      <dd><a href="./1130/exec_01.html" title="서른의연애">실습예제-서른의연애</a></dd>
+      <dd><a href="./1130/exec_02.html" title="국립중앙박물관">실습예제-국립중앙박물관</a></dd>
+    </dl>
+
+    <dl>
+      <dt class="bgcolor01">3일차 - 이미지, svg, 링크, 아이프레임</dt>
+      <dd><a href="./1201/07_img.html" title="이미지태그">이미지태그</a></dd>
+      <dd><a href="./1201/08_svg.html" title="svg이미지">svg이미지</a></dd>
+      <dd><a href="./1201/09_link.html" title="링크태그">링크태그</a></dd>
+      <dd><a href="./1201/10_iframe.html" title="아이프레임">아이프레임</a></dd>
+      <dd><a href="./1201/index.html" title="낭만여행">실습예제-낭만여행</a></dd>
+      <dd><a href="./1201/exec_01.html" title="레시피">실습예제-레시피</a></dd>
+      <dd><a href="./1201/exec_02.html" title="현대자동차">실습예제-현대자동차</a></dd>
+    </dl>
+
+    <dl>
+      <dt class="bgcolor01">4일차 - 테이블, 폼 태그 </dt>
+      <dd><a href="./1202/11_table.html" title="테이블태그">테이블태그</a></dd>
+      <dd><a href="./1202/12_form.html" title="기본폼태그">기본폼태그</a></dd>
+      <dd><a href="./1202/13_form_add.html" title="추가폼태그">추가폼태그</a></dd>
+      <dd><a href="./1202/exec_01.html" title="테이블">실습예제-테이블</a></dd>
+      <dd><a href="./1202/exec_02.html" title="글쓰기">실습예제-글쓰기</a></dd>
+      <dd><a href="./1202/exec_03.html" title="문의하기">실습예제-문의하기</a></dd>
+    </dl>
+
+    <dl>
+      <dt class="bgcolor01">5일차 - 멀티미디어 태그</dt>
+      <dd><a href="./1205/14_multimedia.html" title="멀티미디어">멀티미디어태그</a></dd>
+    </dl>
+    </section>
+
+    <h1><a href="index.html" title="처음으로 바로가기">
+      <img src="./img/css.png" alt="CSS로고"></a></h1>
+    <h2>기초부터 확실하게! CSS를 활용한 UI/UX 디자인 적용</h2>
+      <section class="border02">
+      <dl>
+        <dt class="bgcolor02">1일차 - css 소개와 문법</dt>
+        <dd><a href="./1206/01_css_start.html" title="소개와 문법">css 소개와 문법</a></dd>
+        <dd><a href="./1206/index.html" title="모바일 웹/앱 인트로 화면">모바일 웹/앱 인트로 화면</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor02">2일차 - css 스타일 적용방법과 선택자</dt>
+        <dd><a href="./1207/02_css_link.html" title="css 스타일 적용방법">css 스타일 적용방법</a></dd>
+        <dd><a href="./1207/03_group.html" title="group">group(그룹선택자,)</a></dd>
+        <dd><a href="./1207/04_css_selecter_rank.html" title="selector_rank">selector_rank(우선순위)</a></dd>
+        <dd><a href="./1207/05_css_property.html" title="property">property(속성) - 글자와 문단속성</a></dd>
+        <dd><a href="./1207/exec_01.html" title="농부로 사는 즐거움">실습예제 - 농부로 사는 즐거움</a></dd>
+        <dd><a href="./1207/exec_02.html" title="노랑풍선">실습예제 - 노랑풍선</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor02">3일차 - css 선택자</dt>
+        <dd><a href="./1208/06_selector_after_before.html" title="가상요소 선택자">selecter(가상요소 선택자)</a></dd>
+        <dd><a href="./1208/07_css_selector.html" title="자손, 후손 선택자">selecter(자손, 후손 선택자)</a></dd>
+        <dd><a href="./1208/08_css_selector_link.html" title="link">selector(link)</a></dd>
+        <dd><a href="./1208/exec_01.html" title="쿠팡 여성패션">실습예제 - 쿠팡 여성패션 콘텐츠 따라하기</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor02">4일차 - css 속성선택자</dt>
+        <dd><a href="./1209/09_selector.html" title="속성선택자">selector(속성선택자)</a></dd>
+        <dd><a href="./1209//exec_01.html" title="보노보노처럼 살다니 다행이야">실습예제 - 보노보노처럼 살다니 다행이야</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor02">5일차 - css 박스모델</dt>
+        <dd><a href="./1212/css_boxmodel.html" title="박스모델">boxmodel(박스모델)</a></dd>
+        <dd><a href="./1212/layout_one.html" title="layout_one(1단)">layout_one(1단)</a></dd>
+        <dd><a href="./1212/layout_two.html" title="layout_two(2단)">layout_two(2단)</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor02">6일차 - css 선택자</dt>
+        <dd><a href="./1213/10_selecter.html" title="구조선택자">selecter(구조선택자)</a></dd>
+        <dd><a href="./1213/layout_response.html" title="반응형 웹">반응형 웹</a></dd>
+        <dd><a href="./1213/exec_01.html" title="표만들기">실습예제 - 표만들기</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor02">7일차 - css 요소의 배치방법</dt>
+        <dd><a href="./1214/css_position.html" title="요소의 배치방법">position(요소의 배치방법)</a></dd>
+        <dd><a href="./1214/exec01.html" title="인터파크">실습예제 - 인터파크</a></dd>
+        <dd><a href="./1214/exec02.html" title="뚜레쥬르">실습예제 - 뚜레쥬르</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor02">8일차 - css 내비게이션</dt>
+        <dd><a href="./1215/css_navigation.html" title="내비게이션">navigation(내비게이션)</a></dd>
+        <dd><a href="./1215/exec_01.html" title="지니펫 모바일 웹/앱">실습예제 - 지니펫 모바일 웹/앱</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor02">9일차 - css 속성</dt>
+        <dd><a href="./1216/css_background.html" title="배경색">css 속성 - 배경색</a></dd>
+        <dd><a href="./1216/css_background_image.html" title="background_image">css 속성 - background_image</a></dd>
+        <dd><a href="./1216/horizantal_layout.html" title="웹페이지 레이아웃 방식의 종류">horizantal_layout - 웹페이지 레이아웃 방식의 종류</a></dd>
+        <dd><a href="./1216/index.html" title="스타벅스 모바일 웹">실습예제 - 스타벅스 모바일 웹</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor02">10일차 - css 선택자</dt>
+        <dd><a href="./1219/selector.html" title="동위(인접)선택자">css선택자 - 동위(인접)선택자</a></dd>
+        <dd><a href="./1219/g_navigation.html" title="지마켓 pc화면">실습예제 - 지마켓 pc화면 내비게이션</a></dd>
+        <dd><a href="./1219/mindex.html" title="모바일 지마켓">실습예제 - 모바일 지마켓</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor02">11일차 - css 속성</dt>
+        <dd><a href="./1220/01_transform.html" title="변형속성">transform(변형속성)</a></dd>
+        <dd><a href="./1220/02_transition.html" title="전환속성">transition(전환속성)</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor02">12일차 - css 속성</dt>
+        <dd><a href="./1221/01_slide_banner.html" title="배너슬라이드">transform, transition을 활용한 배너슬라이드</a></dd>
+        <dd><a href="./1221/02_border-radius.html" title="모서리 둥글게">border-radius(모서리 둥글게)</a></dd>
+        <dd><a href="./1221/03_shadow.html" title="그림자">shadow(그림자)속성</a></dd>
+        <dd><a href="./1221/04_keyframe.html" title="keyframe">keyframe</a></dd>
+        <dd><a href="./1221/exec01.html" title="애니메이션">실습예제 - 애니메이션</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor02">13일차 - css 속성</dt>
+        <dd><a href="./1222/01_grid_layout.html" title="그리드">그리드 레이아웃_grid</a></dd>
+        <dd><a href="./1222/grid_responseweb.html" title="반응형 레이아웃">반응형 레이아웃 grid_responseweb</a></dd>
+        <dd><a href="./1222/exec01.html" title="미에로화이바">실습예제 - 미에로화이바</a></dd>
+      </dl>
+
+      <dl>
+        <dt class="bgcolor02">14일차 - 반응형 웹기술 3가지</dt>
+        <dd><a href="./1223/01responseweb.html" title="반응형 웹기술 3가지">반응형 웹기술 3가지</a></dd>
+        <dd><a href="./1223/index.html" title="하림펫푸드">실습예제 - 반응형웹 - 하림펫푸드</a></dd>
+        <dd><a href="./1223/login.html" title="하림펫푸드 로그인">실습예제 - 하림펫푸드 로그인</a></dd>
+      </dl>
+  </main>
+
+  <aside>
+    <a href="#" title="위로 바로가기">top</a>
+  </aside>
+
+  <footer>
+    <address>Copyright&copy;2022 HTML5/CSS3 학습페이지 allrights reserved.</address>
+  </footer>
+</body>
+</html>

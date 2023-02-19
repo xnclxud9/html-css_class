@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인터파크</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    body{
+      font-family: "맑은 고딕";
+    }
+    article{
+      width: 910px;
+      height: 250px;
+      position: relative;
+    }
+    h2{
+      font-size: 16px;
+      border-bottom: 1px solid #333;
+      line-height: 40px;
+      text-indent: 10px;
+    }
+    ul{
+      margin: 30px 0 0 45px;
+    }
+    li{
+      display: inline-block;
+      padding: 0 20px;
+      width: 120px;
+    }
+    li a{
+      text-decoration: none;
+    }
+    li h3{
+      font-size: 14px;
+      color: #676767;
+    }
+    li p{
+      font-size: 12px;
+      color: #bebebe;
+      /* block 요소에만 적용 */
+      text-overflow: ellipsis; /* ... 나오게 */
+      white-space: nowrap; /* 글자를 한줄로 나오게 */
+      overflow: hidden; /* 영역을 벗어난 콘텐츠 숨기기 */
+    }
+    .left{
+      position: absolute;
+      top: 120px;
+    }
+    .right{
+      position: absolute;
+      right: 0;
+      top: 120px;
+    }
+  </style>
+</head>
+<body>
+  <article>
+    <h2>인터파크 전문몰</h2>
+    <ul>
+      <li>
+        <a href="#"><img src="./images/0008.jpg" alt="마카오">
+        <h3>마카오</h3><p>요즘 여기가 대세</p></a>
+      </li>
+      <li>
+        <a href="#"><img src="./images/0020.jpg" alt="베트남">
+        <h3>베트남</h3><p>요즘 대세는 베트남여행</p></a>
+      </li>
+      <li>
+        <a href="#"><img src="./images/0012.jpg" alt="하와이">
+        <h3>하와이</h3><p>이젠 하와이도 인터파크</p></a>
+      </li>
+      <li>
+        <a href="#"><img src="./images/0011.jpg" alt="호주">
+        <h3>호주</h3><p>우리가 꿈꾸는 최고의 호주</p></a>
+      </li>
+      <li>
+        <a href="#"><img src="./images/0013.jpg" alt="클럽메드">
+        <h3>클럽메드</h3><p>프리미엄 올인클루시브</p></a>
+      </li>
+    </ul>
+    <div>
+      <a class="left" href="#"><img src="./images/left_btn.png" alt="왼쪽 버튼"></a>
+      <a class="right" href="#"><img src="./images/right_btn.png" alt="오른쪽 버튼"></a>
+    </div>
+  </article>
+</body>
+</html>
