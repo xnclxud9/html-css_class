@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글쓰기</title>
+  <style>
+    *{margin: 0px;padding: 0px;}
+    h2{
+      text-align: center;
+      background: #d6ccef;
+      color: #ffffff;
+      padding: 20px;
+    }
+    form{
+      width: 400px;
+      margin: auto;
+    }
+    header{margin: 15px 0 10px 0;}
+    header input{width: 300px;}
+    textarea{
+      width: 400px;
+      resize: none;
+    }
+    .file{padding: 5px 0 15px 0;}
+    .btn{
+      display: block;
+      text-align: center;
+      padding: 20px;      
+    }
+    .btn01{
+      border: 0;
+      background-color: #ac9dd6;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 9px 30px;
+      margin-right: 5px;
+      border-radius: 10px;
+    }
+    .btn02{
+      border: 0;
+      background-color: #bbbbbb;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 9px 30px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>글쓰기</h2>
+  <form name="글쓰기" method="get" action="서버">
+    <header>
+      <input type="text" placeholder="제목을 입력하세요." maxlength="16">
+      <select>
+        <option value="">부서</option>
+        <option value="">경제과</option>
+        <option value="">기술과</option>
+        <option value="">운영지원과</option>
+        <option value="">홍보과</option>
+      </select>
+    </header>
+    <main>
+      <textarea rows='10' cols='50'>내용을 입력하세요.</textarea><br>
+      <input type="file" class="file">
+    </main>
+    <hr>
+    <span class="btn">
+      <input type="submit" value="등록하기" class="btn01">
+      <input type="button" value="뒤로가기" class="btn02">
+    </span>
+  </form>
+</body>
+</html>

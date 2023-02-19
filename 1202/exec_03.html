@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문의하기 양식 만들기</title>
+  <style>
+    .color{
+      display: inline;
+      color: #d21d1d
+    }
+    .tb01{
+      width: 800px;
+      margin: auto;
+      border-collapse: collapse;
+      border-top: 2px solid #333;
+      font-size: 12px;
+      color: #333;
+    }
+    .tb01 caption{
+      text-align: right;
+      padding: 10px 0;
+    }
+    .tb01 td{
+      width: 200px;
+      padding: 6px 10px;
+      border: solid 1px #c6c6c6;
+    }
+    .tb01 tr td:first-child{border-left: none;font-weight: 600;}
+    .tb01 tr td:first-child{border-right: none;}
+    .tb01 tr td:last-child{border-left: none;}
+    .tb01 tr td:last-child{border-right: none;}
+    .w01{
+      width: 402px;
+      padding: 5px 0;
+      border: solid 1px #c6c6c6;
+      color: #333;
+    }
+    .w02{
+      width: 400px;
+      padding: 5px 0;
+      border: solid 1px #c6c6c6;
+      color: #333;
+    }
+    .w03{
+      width: 150px;
+      padding: 5px 0;
+      border: solid 1px #c6c6c6;
+      color: #333;
+      vertical-align: middle;
+    }
+    input[type=radio], input[type=checkbox]{
+      accent-color: #616161;
+      color: #333;
+      margin: 10px 0;
+      vertical-align: middle;
+    }
+    label{
+      padding-right: 20px;
+      margin-left: 3px;
+      vertical-align: middle;
+    }
+    textarea{
+      width: 600px;
+      resize: none;
+      border: solid 1px #c6c6c6;
+    }
+    .btn{
+      display: block;
+      text-align: center;
+      padding-top: 20px;
+    }
+    .btn01{
+      border: 0;
+      background-color: #3a4050;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 10px 40px;
+    }
+    .btn02{
+      border: 0;
+      background-color: #8c8c8c;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 10px 40px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <form name="문의하기" method="get" action="서버">
+      <table class="tb01">
+      <caption><p class="color">* </p>표시는 필수 입력 항목입니다.</caption>
+      <tr>
+        <td><p class="color">* </p>문의유형</td>
+        <td><select class="w01">
+          <option value="">제품문의</option>
+          <option value="">배송문의</option>
+          <option value="">이용문의</option>
+          <option value="">기타문의</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td><p class="color">* </p>성함</td>
+        <td><input type="text" maxlength="10" class="w02"></td>
+      </tr>
+      <tr>
+        <td><p class="color">* </p>회사명</td>
+        <td><input type="text" maxlength="10" class="w02"></td>
+      </tr>
+      <tr>
+        <td><p class="color">* </p>직급</td>
+        <td><input type="text" maxlength="10" class="w02"></td>
+      </tr>
+      <tr>
+        <td><p class="color">* </p>부서명</td>
+        <td><input type="text" maxlength="10" class="w02"></td>
+      </tr>
+      <tr>
+        <td><p class="color">* </p>회사규모</td>
+        <td><select class="w01">
+          <option value="">1~50</option>
+          <option value="">51~100</option>
+          <option value="">101~500</option>
+          <option value="">501~</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td><p class="color">* </p>기관구분</td>
+        <td>
+          <input type="radio" checked name="a" id="r01">
+          <label for="r01">기업</label>
+          <input type="radio" name="a" id="r02">
+          <label for="r02">공공</label>
+          <input type="radio" name="a" id="r03">
+          <label for="r03">금융</label>
+          <input type="radio" name="a" id="r04">
+          <label for="r04">교육</label>
+          <input type="radio" name="a" id="r05">
+          <label for="r05">기타</label>
+        </td>
+      </tr>
+      <tr>
+        <td><p class="color">* </p>전화번호</td>
+        <td>
+          <select class="w03">
+            <option value="">010</option>
+            <option value="">011</option>
+            <option value="">019</option>
+          </select>
+          - <input type="text" maxlength="4" class="w03"> - <input type="text" maxlength="4" class="w03"></td>
+      </tr>
+      <tr>
+        <td><p class="color">* </p>E-mail</td>
+        <td>
+          <input type="text" maxlength="20" class="w03"> @ <input type="text" maxlength="20" class="w03">
+          <select class="w03">
+            <option value="">메일계정선택</option>
+            <option value="">011</option>
+            <option value="">019</option>
+            <option value="">02</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>문의제품</td>
+        <td><input type="checkbox" id="c01"><label for="c01">PC 화면 보안</label>
+          <input type="checkbox" id="c02"><label for="c02">모바일 APP 보안</label>
+          <input type="checkbox" id="c03"><label for="c03">멀티미디어 보안</label>
+          <input type="checkbox" id="c04"><label for="c04">CCTV 보안</label><br>
+          <input type="checkbox" id="c05"><label for="c05">문서 DRM</label>
+          <input type="checkbox" id="c06"><label for="c06">웹 위변조 보안</label>
+          <input type="checkbox" id="c07"><label for="c07">취약점 통합 보안</label>
+          <input type="checkbox" id="c08"><label for="c08">기타</label></td>
+      </tr>
+      <tr>
+        <td><p class="color">* </p>방문경로</td>
+        <td>
+          <input type="radio" checked name="b" id="r06">
+          <label for="r06">네이버 검색</label>
+          <input type="radio" name="b" id="r07">
+          <label for="r07">구글 검색</label>
+          <input type="radio" name="b" id="r08">
+          <label for="r08">다음 검색</label>
+          <input type="radio" name="b" id="r09">
+          <label for="r09">보도자료</label>
+          <input type="radio" name="b" id="r10">
+          <label for="r10">신문광고</label><br>
+          <input type="radio" name="b" id="r11">
+          <label for="r11">온라인광고</label>
+          <input type="radio" name="b" id="r12">
+          <label for="r12">지인소개</label>
+          <input type="radio" name="b" id="r13">
+          <label for="r13">뉴스레터</label>
+          <input type="radio" name="b" id="r14">
+          <label for="r14">기타</label><input type="text" maxlength="20" class="w03">
+        </td>
+      </tr>
+      <tr>
+        <td>문의내용</td>
+        <td><textarea rows="10" cols="50" maxlength="500"></textarea></td>
+      </tr>
+      </table>
+      <span class="btn">
+        <input type="submit" value="문의하기" class="btn01">
+        <input type="reset" value="취소하기" class="btn02">
+      </span>
+    </form>
+  </main>
+</body>
+</html>

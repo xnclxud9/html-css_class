@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13_form_add(html5에서 추가된 폼양식 태그와 속성) p.130</title>
+</head>
+<body>
+  <h2>13_form_add(html5에서 추가된 폼양식 태그와 속성) p.130</h2>
+  <p>HTML5에서 추가된 폼태그와 속성들은 현재 사용하고 있는 브라우저(크롬, MS EDGE, 파이어폭스, 오페라, 사파리, 웨일, 스윙.....)에서 버전별 지원을 하기 때문에 지원상황을 확인하고 사용해야 한다. http://caniuse.com(브라우저 버전별 태그 지원 유무 확인 사이트)</p>
+
+  <p>1. 폼양식을 그룹지정하기 위한 요소 - feldset, legend</p>
+  <fieldset>
+    <legend>필수입력정보</legend>
+    <p><label>아이디 : </label><input type="text" placeholder="아이디입력"></p>
+    <p><label>패스워드 : </label><input type="password" placeholder="패스워드입력"></p>
+  </fieldset>
+
+  <fieldset>
+    <legend>선택정보</legend>
+    <p><label>주소 : </label><input type="text" placeholder="예) 강남구 도곡로 000길 0"></p>
+    <p><label>이메일 : </label><input type="email" placeholder="예) id@domain.co.kr"></p>
+  </fieldset>
+  <p>placeholder : 사용자가 입력할 내용을 미리 알려주어 오류가 나지 않도록 방지해줌. 웹접근성 측면에서 도움이 많이 됨.</p>
+
+  <p>search : 사용자가 입력양식에 키워드를 입력하여 검색할 수 있도록 하고자 할 때 사용하는 양식으로써 단어를 입력하면 오른쪽에 'x'버튼이 자동으로 뜨며 클릭하면 글 입력내용이 삭제되는 기능이 있다.</p>
+  <input type="search" placeholder="오늘의 초특가 상품"><input type="button" value="검색">
+
+  <p>email : 이메일 주소를 입력하기 위한 박스로써 입력양식이 맞지 않을 경우 에러가 난다.</p>
+  <input type="email" placeholder="id@domain.co.kr">
+
+  <p>url : 사용자가 도메인 주소를 입력할 수 있도록 하는 양식이며, 주소형식이 맞지 않을 경우 에러메세지가 나온다.</p>
+  <input type="url" placeholder="http://domain.co.kr or com">
+
+  <p>number : 숫자를 입력하기 위한 양식으로써 직접입력하거나 버튼을 클릭하여 '증가', '감소'가 가능하다.</p>
+  수량 선택 : <input type="number">
+
+  <p>date : 년, 월, 일을 선택하기 위한 요소로써 클릭시 달력창이 활성화 됨.</p>
+  날짜 선택 : <input type="date">
+
+  <p>color : 사용자가 원하는 색상을 고르기 위한 양식</p>
+  <input type="color">
+
+  <p>progress : 진행 정도를 나타내는 바를 만드는 태그로써 max, value속성을 사용합니다.</p>
+  <div>html5<progress value="20" max="100"></progress></div>
+  <div>css3<progress value="20" max="100"></progress></div>
+  <div>javascript<progress value="20" max="100" id="bar"></progress></div>
+  <button onclick="jbFunc()">Click</button>
+
+  <script>
+    function jbFunc(){
+      document.getElementById('bar').value='80';
+    }
+  </script>
+</body>
+</html>

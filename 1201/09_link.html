@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>09_하이퍼링크 p.113</title>
+    <style>
+      .btn01{
+        background-color: #1dbd1d;
+        color: #ffffff;
+        padding: 4px 10px;
+        text-decoration: none;
+      }
+      .btn01:hover{
+        border: 2px solid #1dbd1d;
+        background-color: #ffffff;
+        color: #333333;
+      }
+      .t_btn{
+        background-color: #000000;
+        color: #ffffff;
+        padding: 60px 20px;
+        border-radius: 50%;
+        text-decoration: none;
+        position: fixed;/* 고정배치 */
+        right: 30px;bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#bottom" title="아래로 이동하기">페이지 아래로 이동하기</a>
+    <h2 id="title">09_하이퍼링크 p.113</h2>
+    <p>하이퍼링크란? 하이퍼텍스트로 이루어진 문서에서 사용자가 마우스로 클릭을 하였을 때 다른 문서나 페이지로 이동하기 위한 요소로써<br>
+    <a href="#page1" title="페이지1로 이동">1. 텍스트 하이퍼링크</a><br>
+    <a href="#page2" title="페이지2로 이동">2. 이미지 하이퍼링크</a><br>
+    <a href="#page3" title="페이지3으로 이동">3. 이메일 하이퍼링크</a><br>
+    <a href="#page4" title="페이지4로 이동">4. 특정문서의 특정위치로 이동하기 위한 링크</a><br>
+    5. 하나의 이미지에 여러개의 링크를 할 수 있는 이미지 맵 링크가 있다.</p>
+    <p>문법) a href="연결할 페이지 주소" title="도움말 설명"</p>
+
+    <h3 id="page1">1. 문자에 하이퍼링크 걸기</h3>
+    <a href="http://naver.com" title="네이버 바로가기" class="btn01">네이버</a>
+    <a href="http://daum.net" title="다음 바로가기">다음</a>
+    <a href="http://nate.com" title="네이트 바로가기">네이트</a>
+    <a href="http://google.com" title="구글 바로가기">구글</a>
+    <br>
+    <a href="08_svg.html" title="svg문서 보러가기">08_svg문서 보러가기</a>
+    <br>
+    <a href="../1130/01_heading.html" title="h제목요소 문서 보기">h제목요소 문서 보기</a>
+
+    <p>텍스트 링크는 사용자가 한 번 클릭 시 해당 문자는 보라색, 밑줄로 표시되며 클릭하지 않은 경우는 기본 글자색이 파란색, 밑줄로 표시된다.</p>
+
+    <h3 id="page2">2. 이미지에 하이퍼링크 걸기</h3>
+    <a href="http://daum.net" title="다음사이트로 바로가기">
+      <img src="./img/daum_logo.png" alt="다음로고">
+    </a>
+
+    <h3 id="page3">3. 이메일 링크 걸기</h3>
+    <a href="mailto:webmaster@naver.com" title="관리자에게 메일보내기">관리자에게 메일보내기</a>
+
+    <h3 id="page4">4. 특정위치로 이동하기 위한 네임앵커</h3>
+    <p>네임앵커는 현재페이지안에서 특정위치로 이동하기 위한 기능으로 #id명을 작성하고 클릭시 해당 위치로 이동이 되도록 한다. 현재페이지가 아닌 다른 문서의 특정위치로 이동시는 '파일이름, 확장자#id명'으로 작성하면 된다.</p>
+    <a href="07_img.html#name" title="다른페이지의 특정위치로 이동">이미지 문서의 특정페이지로 이동하기</a>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <a href="#title" title="위로 바로가기" class="t_btn">위로 바로가기</a>
+
+    <h3>5. 이미지 맵 링크</h3>
+    <p>이미지맵이란? 하나의 이미지에 여러개의 맵(사각형, 원형, 다각형)을 만들어서 링크를 걸 수 있는 기능.</p>
+    <p>문법) map name="맵이름", area shape="rect, circle, polyon" coords="좌표값"</p>
+    
+    <img src="./img/total_book.jpg" alt="교보문고 책" usemap="#book">
+    <map name="book">
+      <area shape="rect" coords="16,16,107,147" href="https://product.kyobobook.co.kr/detail/S000001771113" title="물이되는 꿈" alt="물이되는 꿈">
+      <area shape="rect" coords="138,16,229,147" href="https://product.kyobobook.co.kr/detail/S000001797010" title="마당을 나온 암탉" alt="마당을 나온 암탉">
+      <area shape="rect" coords="260,16,351,147" href="https://product.kyobobook.co.kr/detail/S000001767425" title="등 스트레칭" alt="등 스트레칭">
+      <area shape="rect" coords="382,16,473,147" href="https://product.kyobobook.co.kr/detail/S000001908943" title="화내고 말았습니다." alt="화내고 말았습니다.">
+    </map>
+    <dl>
+      <dt>이미지 맵 사용순서</dt>
+      <dd>1. 그림판을 실행하여 이미지를 불러온다.</dd>
+      <dd>2. 맵을 만들고자 하는 위치에 마우스 오버하여 좌표값을 메모한다. (9,12,113,153)</dd>
+      <dd>3. 이미지 태그로 이미지를 삽입하고 map태그로 연결하여 하이퍼링크를 건다.</dd>
+    </dl>
+    
+    <span id="bottom">&nbsp;</span>
+  </body>
+</html>
